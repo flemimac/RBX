@@ -3,7 +3,7 @@ from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
     project_name: str = "RBX"
-    api_v1_prefix: str = "/api/v1"
+    api_v1_prefix: str = "/api"
     environment: str = "development"
     database_url: str = "sqlite+aiosqlite:///./rbx.db"
     secret_key: str = "change-me"

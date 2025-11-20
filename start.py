@@ -6,11 +6,11 @@ from pathlib import Path
 
 ROOT = Path(__file__).parent.resolve()
 BACKEND_DIR = ROOT / "backend"
-FRONTEND_DIR = ROOT / "frontend" / "src"
+FRONTEND_DIR = ROOT / "frontend"
 
 
-def run_process(cmd: list[str], cwd: Path | None = None) -> subprocess.Popen:
-    return subprocess.Popen(cmd, cwd=cwd)
+def run_process(cmd: list[str], cwd: Path | None = None, shell: bool = False) -> subprocess.Popen:
+    return subprocess.Popen(cmd, cwd=cwd, shell=shell)
 
 
 def main() -> None:
@@ -21,28 +21,25 @@ def main() -> None:
         "app.main:app",
         "--reload",
     ]
-    frontend_cmd = [
-        sys.executable,
-        "-m",
-        "http.server",
-        "5173",
-        "--directory",
-        str(FRONTEND_DIR),
-    ]
+    
+    frontend_cmd = ["npm", "run", "dev"]
 
     processes: list[subprocess.Popen] = []
     try:
         processes.append(run_process(backend_cmd, cwd=BACKEND_DIR))
         time.sleep(2)
-        processes.append(run_process(frontend_cmd, cwd=ROOT))
-        time.sleep(2)
-        webbrowser.open("http://127.0.0.1:5173")
+        
+        is_windows = sys.platform == "win32"
+        processes.append(run_process(frontend_cmd, cwd=FRONTEND_DIR, shell=is_windows))
+        time.sleep(3)
+        
+        webbrowser.open("http://localhost:3000")
 
         while all(p.poll() is None for p in processes):
             time.sleep(1)
 
     except KeyboardInterrupt:
-        print("End process...")
+        pass
     finally:
         for proc in processes:
             if proc.poll() is None:
@@ -55,5 +52,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
-

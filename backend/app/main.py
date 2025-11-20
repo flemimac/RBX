@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app import models  # noqa: F401
+from app import models
 from app.api.routes import api_router
 from app.core.config import settings
 from app.db.base import Base

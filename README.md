@@ -1,6 +1,18 @@
+**Бекенд:**
+```bash
 cd backend
 python -m venv venv
-venv/Scripts/activate.bat
+venv\Scripts\activate.bat
 pip install -r requirements.txt
-cd ..
+```
+
+**Фронтенд:**
+```bash
+cd frontend
+npm install
+```
+
+**Запуск:**
+```bash
 python start.py
+```

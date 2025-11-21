@@ -2,6 +2,21 @@ import type { User, Token, LoginFormData, RegisterFormData, Route } from '../typ
 import { API_BASE_URL } from '../config/constants';
 import { storage } from '../utils/storage';
 
+export interface ProcessedFile {
+  original: string;
+  processed_id?: string;
+  processed_path?: string;
+  file_id?: string;
+  error?: string;
+  note?: string;
+}
+
+export interface UploadFilesResponse {
+  message: string;
+  files: string[];
+  processed_files: ProcessedFile[];
+}
+
 class ApiService {
   private getToken(): string | null {
     return storage.getToken();
@@ -138,12 +153,39 @@ class ApiService {
     return this.requestWithoutBody(`/routes/${id}`, 'DELETE');
   }
 
-  async uploadFiles(routeId: string, files: File[]): Promise<void> {
+  async uploadFiles(routeId: string, files: File[]): Promise<UploadFilesResponse> {
     const formData = new FormData();
     files.forEach((file) => {
       formData.append('files', file);
     });
-    return this.requestWithFormData<void>(`/routes/${routeId}/files`, formData);
+    return this.requestWithFormData<UploadFilesResponse>(`/routes/${routeId}/files`, formData);
+  }
+
+  getProcessedImageUrl(routeId: string, fileId: string): string {
+    const token = this.getToken();
+    const url = `${API_BASE_URL}/routes/${routeId}/files/${fileId}/processed`;
+    // Добавляем токен как query параметр
+    return token ? `${url}?token=${encodeURIComponent(token)}` : url;
+  }
+
+  async deleteFile(routeId: string, fileId: string): Promise<void> {
+    return this.requestWithoutBody(`/routes/${routeId}/files/${fileId}`, 'DELETE');
+  }
+
+  async getRouteFiles(routeId: string): Promise<{ files: ProcessedFile[] }> {
+    return this.request<{ files: ProcessedFile[] }>(`/routes/${routeId}/files`);
+  }
+
+  async getRouteStats(routeId: string): Promise<{
+    total_processed: number;
+    with_green_detections: number;
+    with_red_detections: number;
+  }> {
+    return this.request<{
+      total_processed: number;
+      with_green_detections: number;
+      with_red_detections: number;
+    }>(`/routes/${routeId}/stats`);
   }
 }
 

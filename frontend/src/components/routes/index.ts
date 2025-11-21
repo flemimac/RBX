@@ -5,4 +5,5 @@ export { RouteView } from './RouteView';
 export { AddRouteForm } from './AddRouteForm';
 export { RouteGalleryModal } from './RouteGalleryModal';
 export { EditRouteModal } from './EditRouteModal';
+export { ImageModal } from './ImageModal';
 

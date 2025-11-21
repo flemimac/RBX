@@ -1,0 +1,362 @@
+{
+  "5026e4e1-b8ce-4104-a967-479ae0112e2f": {
+    "original_name": "Thuy-tinh-46-_jpg.rf.5e0c824005eefeab7491ed214a3c531f.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 1,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 2
+  },
+  "591752e2-fd3c-43b0-97ab-657725122ff1": {
+    "original_name": "Thuy-tinh-48-_jpg.rf.eba66d92354ac16ee544ee72dda2200f.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 1
+  },
+  "fc5b88bf-4a9e-43c4-b69f-75fb494b2afb": {
+    "original_name": "Thuy-tinh-50-_jpg.rf.14fc333793f03713186be8b836e3fc64.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 1,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 2
+  },
+  "0e6fe49a-7d2b-4719-8714-bc5b9bf294d8": {
+    "original_name": "z3954402268499_aed9fb91abcd5e6a18f59ef0f66f849e_jpg.rf.7eae65dcd6400f98161bbd439abc889a.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 1,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 1
+  },
+  "8ccc7d4b-9f10-4aa5-b297-45cb248c93e2": {
+    "original_name": "z3954402338014_3af0b1239a2b695342e80749b06d6e96_jpg.rf.05d590620e12002541543594593213cc.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 2,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 2
+  },
+  "8bb2f61e-d0ca-4ae2-86f0-aa638e2aad91": {
+    "original_name": "tcrung_ct_606_jpg.rf.d90949cca6b1e7dc631e416cc80a993e.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 1,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 1
+  },
+  "730eb061-ae22-4d84-88d4-85a4f5ea5e40": {
+    "original_name": "tcrung_ct_607_jpg.rf.ab9f89b239511dae6e1659fc2073d2d8.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 1,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 1
+  },
+  "b9653b6a-56d5-4fc5-be2e-73cfad53b3e4": {
+    "original_name": "tcrung_ct_609_jpg.rf.e97669271f0aa38835d38306a8828b0d.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 1,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 1
+  },
+  "d43a78e4-8965-4d91-8efd-0bca7995017c": {
+    "original_name": "tcrung_ct_611_jpg.rf.73589225f74c1762ffccf5eaa0e3887b.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 1,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 1
+  },
+  "0ab76e73-6dcd-4490-ab6d-d8774faef24b": {
+    "original_name": "tcrung_ct_613_jpg.rf.dc8a8e03f568238c3a2411fce9276a11.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 1,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 1
+  },
+  "be5d126a-dcaa-4648-9038-f2f246b11658": {
+    "original_name": "tcrung_ct_614_jpg.rf.c57f19558d63b84687feb97e3b4bca2e.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 1,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 1
+  },
+  "842e98e1-4a11-4068-b856-682c2d952165": {
+    "original_name": "tcrung_ct_617_jpg.rf.76132fcd15bdc9dfe40efadcb8c47b98.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 1,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 1
+  },
+  "2a75d8f9-d21f-488f-8e32-8cee0de86872": {
+    "original_name": "tcrung_ct_618_jpg.rf.eb1f977da5ddd04578092b50d6e07e10.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 1,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 1
+  },
+  "31202bc3-dedb-4be0-8a8e-bb57b89f4115": {
+    "original_name": "tcrung_ct_620_jpg.rf.852cbfc2b5f5a166ff624de06318c80a.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 1,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 1
+  },
+  "eb9e4298-47f8-4378-aefd-be2eea11be20": {
+    "original_name": "Thuy-tinh-1-_jpg.rf.7d5ad3a46e81d643e2598e7e0b151ae9.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 2,
+    "green_detection_count": 1,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 3
+  },
+  "e342e1e8-db08-4b04-8c50-ec23167c35d5": {
+    "original_name": "Thuy-tinh-2-_jpg.rf.d1b86002006d8f50fc40a7e736842e60.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 2,
+    "green_detection_count": 3,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 5
+  },
+  "7c2a443f-84a4-4f32-92bc-f647721c3527": {
+    "original_name": "Thuy-tinh-4-_jpg.rf.1432e7e3f897a85f04a404c3729fbc17.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 6,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 7
+  },
+  "c8bb613d-1f67-4809-9b87-f4515f711da7": {
+    "original_name": "Thuy-tinh-10-_jpg.rf.3243f29957b4ccad75bcf59cbd8d7ae9.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 2,
+    "green_detection_count": 1,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 3
+  },
+  "b0329dbb-3099-4925-8e13-e98ab55db5cb": {
+    "original_name": "Thuy-tinh-11-_jpg.rf.2905f0f7476c487e8d45f7ea28126de7.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 2,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 3
+  },
+  "8e2056a7-773e-4a88-8f11-9043a5ea94e6": {
+    "original_name": "Thuy-tinh-12-_jpg.rf.ac38a72c48fcba6265da861fb6e4c095.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 1,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 2
+  },
+  "2325ec3d-bb1a-405f-98d1-f6db90116df6": {
+    "original_name": "Thuy-tinh-15-_jpg.rf.b3fb77008530b6e89b65e80a7635b4f3.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 1,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 2
+  },
+  "e170210a-fd07-4005-8626-3c06cffec8cb": {
+    "original_name": "Thuy-tinh-16-_jpg.rf.6a07c1052839e91310dfc092a89669c9.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 2,
+    "green_detection_count": 1,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 3
+  },
+  "382510c2-a8d7-496e-80af-757d436e13c2": {
+    "original_name": "Thuy-tinh-17-_jpg.rf.629f7514a0c2ea6c42e4caf5486b2305.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 1,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 2
+  },
+  "b92edf29-b316-46db-8f11-b08055f390ab": {
+    "original_name": "Thuy-tinh-18-_jpg.rf.dbdcc845164b3479f1e269953c530a97.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 2,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 3
+  },
+  "5c9cc5da-7a2a-4bd7-94b4-54e08daf1b1f": {
+    "original_name": "Thuy-tinh-24-_jpg.rf.04c1e2a555bcc4d3de1dbad4db6458d0.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 3,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 3
+  },
+  "aa345b13-a00d-4d24-a8a7-496e1d6bf14b": {
+    "original_name": "Thuy-tinh-26-_jpg.rf.006634aa537dca91ebafe3499808c583.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 2,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 2
+  },
+  "3ad68ca1-752c-4c3c-9341-7b1ac91bc96b": {
+    "original_name": "Thuy-tinh-27-_jpg.rf.6668fd01515200eb978376d8f33d3989.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 2,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 2
+  },
+  "58fb16d3-dcbc-4745-af22-7945b201bf3c": {
+    "original_name": "Thuy-tinh-29-_jpg.rf.80285be02cf571a657cf9dd2465cf5c8.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 1,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 2
+  },
+  "e0eecb30-40aa-4b04-80fd-93e1aeacb136": {
+    "original_name": "Thuy-tinh-31-_jpg.rf.0ea6898e2556b9bb92fdc1a337bfd400.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 1
+  },
+  "8ab2645c-1f8d-4d02-82d8-9a3d198dddbd": {
+    "original_name": "Thuy-tinh-34-_JPG_jpg.rf.54190144b3f82efda548242bf7e807a4.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 2,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 3
+  },
+  "e3b8f9f2-6ec4-4b85-95c7-a83d6f9b387e": {
+    "original_name": "Thuy-tinh-35-_JPG_jpg.rf.01d3c4aa459bad45cece12b7d527d0a5.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 2,
+    "green_detection_count": 2,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 4
+  },
+  "bc444510-036f-4eb7-a816-4710d2a3e645": {
+    "original_name": "Thuy-tinh-36-_JPG_jpg.rf.3e2f9d440b46e08b02095a74b3fb98be.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 5,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 6
+  },
+  "f5dbd756-6095-46b8-96f5-81c3010d5452": {
+    "original_name": "Thuy-tinh-37-_JPG_jpg.rf.aa73de0ccd513fd9f11030fa0501fcec.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 2,
+    "green_detection_count": 8,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 10
+  },
+  "9b7f09e0-cd0b-403e-85a5-76cf0d60c50f": {
+    "original_name": "Thuy-tinh-38-_JPG_jpg.rf.8d3658c114cdc9984d21dbb2643971fb.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 3,
+    "green_detection_count": 2,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 5
+  },
+  "0daf7140-038c-4b42-a5be-edb1128e4d0a": {
+    "original_name": "Thuy-tinh-39-_JPG_jpg.rf.644abe9eddc805366d315d7f692ab081.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 2,
+    "green_detection_count": 5,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 7
+  },
+  "375dac2f-82a4-4e70-85a6-0cb67de6fb39": {
+    "original_name": "Thuy-tinh-40-_jpg.rf.a7dfdc92d68b2b2c2f37d601d2a6671c.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 2,
+    "green_detection_count": 3,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 5
+  },
+  "5493dae9-b2ff-4dc6-8a6b-c029f9344adf": {
+    "original_name": "Thuy-tinh-42-_jpg.rf.adde6c8bf3d5789f332083926703cea0.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 2,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 3
+  },
+  "bcad7251-e80f-41ca-9d16-145f724722e0": {
+    "original_name": "Thuy-tinh-43-_JPG_jpg.rf.396d5a3a55d4ec153e20290fd9a9755f.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 1,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 2
+  },
+  "9166eec9-e213-4355-a905-0adccb3951e2": {
+    "original_name": "Thuy-tinh-44-_JPG_jpg.rf.33673bb7c1074b4404aaed8ef0eaa985.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 1,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 2
+  },
+  "dfb0a2da-1b48-48f9-9900-bc2eca29dfb2": {
+    "original_name": "Thuy-tinh-45-_JPG_jpg.rf.e7c7143a8a04aedad1adf1349b1d90a0.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 1
+  }
+}

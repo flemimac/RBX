@@ -1,0 +1,117 @@
+.create-route-with-files-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.create-route-with-files-modal {
+  background: #2d2d2d;
+  border: 1px solid #3d3d3d;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 500px;
+  color: #e5e7eb;
+}
+
+.create-route-with-files-title {
+  margin: 0 0 1rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #e5e7eb;
+}
+
+.create-route-with-files-info {
+  margin: 0 0 1.5rem 0;
+  font-size: 0.875rem;
+  color: #9ca3af;
+  line-height: 1.5;
+}
+
+.create-route-with-files-form-group {
+  margin-bottom: 1.5rem;
+}
+
+.create-route-with-files-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  color: #9ca3af;
+  font-weight: 500;
+}
+
+.create-route-with-files-input,
+.create-route-with-files-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  background: #1a1a1a;
+  border: 1px solid #3d3d3d;
+  border-radius: 8px;
+  color: #e5e7eb;
+  font-size: 0.875rem;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.create-route-with-files-input:focus,
+.create-route-with-files-textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.create-route-with-files-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.create-route-with-files-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+}
+
+.create-route-with-files-cancel,
+.create-route-with-files-submit {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.create-route-with-files-cancel {
+  background: transparent;
+  border: 1px solid #3d3d3d;
+  color: #9ca3af;
+}
+
+.create-route-with-files-cancel:hover {
+  background: #353535;
+  border-color: #4d4d4d;
+  color: #e5e7eb;
+}
+
+.create-route-with-files-submit {
+  background: #2563eb;
+  color: #fff;
+}
+
+.create-route-with-files-submit:hover {
+  background: #1d4ed8;
+}
+
+.create-route-with-files-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+

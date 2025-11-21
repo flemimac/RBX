@@ -44,11 +44,34 @@ export const Home: React.FC = () => {
   const handleAddRoute = async (name: string, description?: string) => {
     try {
       const newRoute = await apiService.createRoute(name, description);
-      setRoutes([...routes, newRoute]);
+      const fileCount = await fileStorage.getFileCount(newRoute.id);
+      setRoutes([...routes, { ...newRoute, fileCount }]);
       setShowAddForm(false);
     } catch (error) {
       console.error('Не удалось создать маршрут:', error);
       alert('Не удалось создать маршрут');
+    }
+  };
+
+  const handleCreateRouteWithFiles = async (name: string, description: string | undefined, files: File[]) => {
+    try {
+      // Создаем маршрут
+      const newRoute = await apiService.createRoute(name, description);
+      const fileCount = await fileStorage.getFileCount(newRoute.id);
+      const routeWithFileCount = { ...newRoute, fileCount };
+
+      // Добавляем маршрут в список
+      setRoutes([...routes, routeWithFileCount]);
+
+      // Выбираем созданный маршрут
+      setSelectedRoute(routeWithFileCount);
+
+      // Загружаем файлы в созданный маршрут
+      await handleFilesUpload(newRoute.id, files);
+    } catch (error) {
+      console.error('Не удалось создать маршрут с файлами:', error);
+      alert('Не удалось создать маршрут с файлами');
+      throw error;
     }
   };
 
@@ -66,6 +89,10 @@ export const Home: React.FC = () => {
       await apiService.deleteRoute(id);
       await fileStorage.deleteRouteFiles(id);
       setRoutes(routes.filter((route) => route.id !== id));
+      // Сбрасываем выбранный маршрут, если удалили выбранный
+      if (selectedRoute?.id === id) {
+        setSelectedRoute(null);
+      }
     } catch (error) {
       console.error('Не удалось удалить маршрут:', error);
       alert('Не удалось удалить маршрут');
@@ -102,10 +129,18 @@ export const Home: React.FC = () => {
 
   const handleFilesUpload = async (routeId: string, files: File[]) => {
     try {
-      await fileStorage.saveFiles(routeId, files);
-      await fetchRoutes();
+      // Загружаем файлы через API (обработка происходит на сервере)
+      await apiService.uploadFiles(routeId, files);
+      const data = await apiService.getRoutes();
+      const routesWithFileCounts = await Promise.all(
+        data.map(async (route) => {
+          const fileCount = await fileStorage.getFileCount(route.id);
+          return { ...route, fileCount };
+        })
+      );
+      setRoutes(routesWithFileCounts);
       if (selectedRoute?.id === routeId) {
-        const updatedRoute = routes.find((r) => r.id === routeId);
+        const updatedRoute = routesWithFileCounts.find((r) => r.id === routeId);
         if (updatedRoute) {
           setSelectedRoute(updatedRoute);
         }
@@ -136,6 +171,8 @@ export const Home: React.FC = () => {
             onFilesUpload={handleFilesUpload}
             onEdit={handleEditRoute}
             onDelete={handleDeleteRoute}
+            onAddRoute={() => setShowAddForm(true)}
+            onCreateRouteWithFiles={handleCreateRouteWithFiles}
           />
         </div>
       </div>

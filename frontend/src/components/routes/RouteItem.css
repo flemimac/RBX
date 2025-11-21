@@ -1,7 +1,7 @@
 .route-item {
   background: white;
   border: 1px solid #e2e8f0;
-  border-radius: 12px;
+  border-radius: 30px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
   transition: box-shadow 0.2s ease;
@@ -20,8 +20,8 @@
 .route-info-section {
   flex: 0 0 auto;
   min-width: 200px;
-  max-width: 300px;
-  overflow: hidden;
+  max-width: 350px;
+  overflow: visible;
 }
 
 .route-name {
@@ -32,11 +32,85 @@
 }
 
 .route-description {
-  margin: 0;
+  margin: 0 0 0.75rem 0;
   font-size: 0.875rem;
   color: #64748b;
   line-height: 1.5;
   word-wrap: break-word;
+}
+
+.route-stats {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  margin-top: 0.75rem;
+  min-height: 24px;
+}
+
+.route-stat-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.route-stat-icon {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.route-stat-icon-green {
+  background-color: #10b981;
+}
+
+.route-stat-icon-red {
+  background-color: #dc2626;
+}
+
+.route-stat-icon-gray {
+  background-color: #6b7280;
+  border-radius: 50%;
+  position: relative;
+}
+
+.route-stat-icon-gray::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  border: 2px solid white;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.route-stat-value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.route-stat-item.route-stat-green .route-stat-value {
+  color: #10b981;
+}
+
+.route-stat-item.route-stat-red .route-stat-value {
+  color: #dc2626;
+}
+
+.route-stat-item.route-stat-processed .route-stat-value {
+  color: #6b7280;
 }
 
 .route-dragdrop-section {
@@ -117,4 +191,3 @@
   white-space: pre-line;
   border: 1px solid #fecaca;
 }
-

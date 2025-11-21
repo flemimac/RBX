@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
+import './RouteItem.css';
 import { DragDropZone } from '../ui/DragDropZone';
 import { validateFiles } from '../../utils';
 import type { Route } from '../../types';
-import './RouteItem.css';
 
 interface RouteItemProps {
   route: Route;
@@ -32,14 +32,14 @@ export const RouteItem: React.FC<RouteItemProps> = ({
   const handleFilesDropped = async (files: File[]) => {
     setError(null);
     setUploading(true);
-    
+
     try {
       const { valid, errors } = await validateFiles(files);
-      
+
       if (errors.length > 0) {
         setError(errors.join('\n'));
       }
-      
+
       if (valid.length > 0) {
         try {
           await onFilesUpload(route.id, valid);
@@ -78,9 +78,6 @@ export const RouteItem: React.FC<RouteItemProps> = ({
           )}
           {error && (
             <div className="upload-error">{error}</div>
-          )}
-          {route.fileCount !== undefined && route.fileCount > 0 && (
-            <div className="file-count">Файлов: {route.fileCount}</div>
           )}
         </div>
         <div className="route-actions">

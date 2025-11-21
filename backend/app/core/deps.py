@@ -1,4 +1,5 @@
-from fastapi import Depends, HTTPException, status
+from fastapi import Depends, HTTPException, status, Query, Header
+from typing import Optional
 
 from fastapi.security import OAuth2PasswordBearer
 from jose import JWTError
@@ -12,10 +13,11 @@ from app.models.user import User
 
 oauth2_scheme = OAuth2PasswordBearer(
     tokenUrl=f"{settings.api_v1_prefix}/auth/login",
+    auto_error=False,  # Не выбрасываем ошибку автоматически
 )
 
 async def get_current_user(
-    token: str = Depends(oauth2_scheme),
+    token: Optional[str] = Depends(oauth2_scheme),
     session: AsyncSession = Depends(get_db),
 ) -> User:
     credentials_exception = HTTPException(
@@ -23,6 +25,42 @@ async def get_current_user(
         detail="Не удалось проверить учетные данные",
         headers={"WWW-Authenticate": "Bearer"},
     )
+
+    if not token:
+        raise credentials_exception
+
+    try:
+        email = decode_token(token)
+    except JWTError as exc:
+        raise credentials_exception from exc
+
+    result = await session.execute(select(User).where(User.email == email))
+    user = result.scalar_one_or_none()
+    if user is None:
+        raise credentials_exception
+    return user
+
+
+async def get_current_user_optional(
+    token: Optional[str] = Query(None, alias="token"),
+    authorization: Optional[str] = Header(None),
+    session: AsyncSession = Depends(get_db),
+) -> User:
+    """Получить текущего пользователя из токена в query параметре или заголовке"""
+    credentials_exception = HTTPException(
+        status_code=status.HTTP_401_UNAUTHORIZED,
+        detail="Не удалось проверить учетные данные",
+        headers={"WWW-Authenticate": "Bearer"},
+    )
+
+    # Пытаемся получить токен из query параметра или заголовка
+    if not token and authorization:
+        # Извлекаем токен из заголовка "Bearer <token>"
+        if authorization.startswith("Bearer "):
+            token = authorization[7:]
+    
+    if not token:
+        raise credentials_exception
 
     try:
         email = decode_token(token)

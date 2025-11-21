@@ -11,6 +11,7 @@ export interface Token {
 export interface Route {
   id: string;
   name: string;
+  description?: string | null;
   user_id: string;
   files?: string[];
   fileCount?: number;

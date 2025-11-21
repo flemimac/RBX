@@ -6,6 +6,7 @@ import type { Route } from '../../types';
 import { RouteItem } from './RouteItem';
 import { AddRouteForm } from './AddRouteForm';
 import { RouteGalleryModal } from './RouteGalleryModal';
+import { EditRouteModal } from './EditRouteModal';
 import { ConfirmModal } from '../ui/ConfirmModal';
 import './Home.css';
 
@@ -16,6 +17,7 @@ export const Home: React.FC = () => {
   const [showAddForm, setShowAddForm] = useState(false);
   const [selectedRoute, setSelectedRoute] = useState<Route | null>(null);
   const [routeToDelete, setRouteToDelete] = useState<Route | null>(null);
+  const [routeToEdit, setRouteToEdit] = useState<Route | null>(null);
 
   const fetchRoutes = async () => {
     setLoading(true);
@@ -41,9 +43,9 @@ export const Home: React.FC = () => {
     });
   }, []);
 
-  const handleAddRoute = async (name: string) => {
+  const handleAddRoute = async (name: string, description?: string) => {
     try {
-      const newRoute = await apiService.createRoute(name);
+      const newRoute = await apiService.createRoute(name, description);
       setRoutes([...routes, newRoute]);
       setShowAddForm(false);
     } catch (error) {
@@ -74,6 +76,27 @@ export const Home: React.FC = () => {
 
   const handleRouteInfo = (route: Route) => {
     setSelectedRoute(route);
+  };
+
+  const handleEditRoute = (route: Route) => {
+    setRouteToEdit(route);
+  };
+
+  const handleSaveRoute = async (id: string, name: string, description?: string) => {
+    try {
+      const updatedRoute = await apiService.updateRoute(id, name, description);
+      setRoutes(
+        routes.map((route) =>
+          route.id === id
+            ? { ...updatedRoute, fileCount: route.fileCount }
+            : route
+        )
+      );
+      setRouteToEdit(null);
+    } catch (error) {
+      console.error('Не удалось обновить маршрут:', error);
+      alert('Не удалось обновить маршрут');
+    }
   };
 
   const handleFilesUpload = async (routeId: string, files: File[]) => {
@@ -117,6 +140,7 @@ export const Home: React.FC = () => {
                   route={route}
                   onDelete={() => handleDeleteRoute(route)}
                   onInfo={handleRouteInfo}
+                  onEdit={handleEditRoute}
                   onFilesUpload={handleFilesUpload}
                 />
               ))
@@ -143,6 +167,15 @@ export const Home: React.FC = () => {
         <RouteGalleryModal
           route={selectedRoute}
           onClose={() => setSelectedRoute(null)}
+        />
+      )}
+
+      {routeToEdit && (
+        <EditRouteModal
+          isOpen={true}
+          route={routeToEdit}
+          onSave={handleSaveRoute}
+          onCancel={() => setRouteToEdit(null)}
         />
       )}
 

@@ -71,10 +71,10 @@ class ApiService {
     return this.request<Route[]>('/routes');
   }
 
-  async createRoute(name: string): Promise<Route> {
+  async createRoute(name: string, description?: string | null): Promise<Route> {
     return this.request<Route>('/routes', {
       method: 'POST',
-      body: JSON.stringify({ name }),
+      body: JSON.stringify({ name, description: description || null }),
     });
   }
 
@@ -125,6 +125,13 @@ class ApiService {
     }
 
     return response.json();
+  }
+
+  async updateRoute(id: string, name: string, description?: string | null): Promise<Route> {
+    return this.request<Route>(`/routes/${id}`, {
+      method: 'PUT',
+      body: JSON.stringify({ name, description: description || null }),
+    });
   }
 
   async deleteRoute(id: string): Promise<void> {

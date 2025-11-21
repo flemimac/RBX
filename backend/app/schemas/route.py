@@ -3,6 +3,7 @@ from pydantic import BaseModel
 
 class RouteBase(BaseModel):
     name: str
+    description: str | None = None
 
 
 class RouteCreate(RouteBase):

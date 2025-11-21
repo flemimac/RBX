@@ -6,19 +6,35 @@
   margin-top: 1.5rem;
 }
 
-.route-name-input {
+.add-route-form-group {
+  margin-bottom: 1.5rem;
+}
+
+.add-route-form-group:last-of-type {
+  margin-bottom: 0;
+}
+
+.route-name-input,
+.route-description-input {
   width: 100%;
   padding: 0.75rem;
   border: 1px solid #cbd5e1;
   border-radius: 8px;
   font-size: 1rem;
-  margin-bottom: 1rem;
+  font-family: inherit;
+  box-sizing: border-box;
 }
 
-.route-name-input:focus {
+.route-name-input:focus,
+.route-description-input:focus {
   outline: none;
   border-color: #2563eb;
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.route-description-input {
+  resize: vertical;
+  min-height: 80px;
 }
 
 .form-actions {

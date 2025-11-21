@@ -7,6 +7,7 @@ from app.crud.route import (
     get_routes_by_user,
     delete_route as delete_route_db,
     get_route_by_id,
+    update_route,
 )
 from app.db.session import get_db
 from app.models.user import User
@@ -25,6 +26,7 @@ async def list_routes(
         RouteRead(
             id=route.id,
             name=route.name,
+            description=route.description,
             user_id=route.user_id,
             files=[],
         )
@@ -38,10 +40,39 @@ async def create_route_endpoint(
     current_user: User = Depends(get_current_user),
     session: AsyncSession = Depends(get_db),
 ) -> RouteRead:
-    route = await create_route(session, route_data.name, current_user.id)
+    route = await create_route(session, route_data.name, current_user.id, route_data.description)
     return RouteRead(
         id=route.id,
         name=route.name,
+        description=route.description,
+        user_id=route.user_id,
+        files=[],
+    )
+
+
+@router.put("/{route_id}", response_model=RouteRead)
+async def update_route_endpoint(
+    route_id: str,
+    route_data: RouteCreate,
+    current_user: User = Depends(get_current_user),
+    session: AsyncSession = Depends(get_db),
+) -> RouteRead:
+    route = await update_route(
+        session,
+        route_id,
+        current_user.id,
+        route_data.name,
+        route_data.description,
+    )
+    if not route:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Маршрут не найден",
+        )
+    return RouteRead(
+        id=route.id,
+        name=route.name,
+        description=route.description,
         user_id=route.user_id,
         files=[],
     )

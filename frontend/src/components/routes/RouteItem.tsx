@@ -8,6 +8,7 @@ interface RouteItemProps {
   route: Route;
   onDelete: (id: string) => void;
   onInfo: (route: Route) => void;
+  onEdit: (route: Route) => void;
   onFilesUpload: (routeId: string, files: File[]) => void;
 }
 
@@ -15,10 +16,18 @@ export const RouteItem: React.FC<RouteItemProps> = ({
   route,
   onDelete,
   onInfo,
+  onEdit,
   onFilesUpload,
 }) => {
   const [uploading, setUploading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  const truncateDescription = (text: string, maxLength: number = 150): string => {
+    if (text.length <= maxLength) {
+      return text;
+    }
+    return text.slice(0, maxLength) + '...';
+  };
 
   const handleFilesDropped = async (files: File[]) => {
     setError(null);
@@ -53,9 +62,38 @@ export const RouteItem: React.FC<RouteItemProps> = ({
 
   return (
     <div className="route-item">
-      <div className="route-header">
-        <h3 className="route-name">{route.name}</h3>
+      <div className="route-main-content">
+        <div className="route-info-section">
+          <h3 className="route-name">{route.name}</h3>
+          {route.description && (
+            <p className="route-description">
+              {truncateDescription(route.description)}
+            </p>
+          )}
+        </div>
+        <div className="route-dragdrop-section">
+          <DragDropZone onFilesDropped={handleFilesDropped} />
+          {uploading && (
+            <div className="upload-status">Загрузка файлов...</div>
+          )}
+          {error && (
+            <div className="upload-error">{error}</div>
+          )}
+          {route.fileCount !== undefined && route.fileCount > 0 && (
+            <div className="file-count">Файлов: {route.fileCount}</div>
+          )}
+        </div>
         <div className="route-actions">
+          <button
+            className="btn-edit"
+            onClick={() => onEdit(route)}
+            title="Редактировать маршрут"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+              <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+            </svg>
+          </button>
           <button
             className="btn-info"
             onClick={() => onInfo(route)}
@@ -78,18 +116,6 @@ export const RouteItem: React.FC<RouteItemProps> = ({
             </svg>
           </button>
         </div>
-      </div>
-      <div className="route-content">
-        <DragDropZone onFilesDropped={handleFilesDropped} />
-        {uploading && (
-          <div className="upload-status">Загрузка файлов...</div>
-        )}
-        {error && (
-          <div className="upload-error">{error}</div>
-        )}
-        {route.fileCount !== undefined && route.fileCount > 0 && (
-          <div className="file-count">Файлов: {route.fileCount}</div>
-        )}
       </div>
     </div>
   );

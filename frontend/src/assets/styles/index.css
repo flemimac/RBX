@@ -13,21 +13,20 @@ html {
 body {
     margin: 0;
     min-height: 100vh;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 3rem 1rem;
+    align-items: stretch;
+    justify-content: stretch;
+    padding: 0;
     overflow: hidden;
     height: 100vh;
+    background: #1a1a1a;
 }
 
 main {
     width: 100%;
-    max-width: 2500px;
-    padding: 2rem 3rem;
-    border-radius: 24px;
-    background: white;
-    box-shadow: 0 25px 50px rgba(15, 23, 42, 0.15);
+    height: 100%;
+    border-radius: 0;
+    background: #1a1a1a;
+    box-shadow: none;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -49,15 +48,6 @@ h1 {
     border-radius: 18px;
     padding: 1.5rem;
     background: #f8fafc;
-}
-
-
-.auth-only form,
-.auth-forms form {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    text-align: left;
 }
 
 label {
@@ -151,7 +141,7 @@ button:disabled {
     main {
         max-width: 2500px;
         width: 100%;
-        padding: 3rem 4rem;
+        /* padding: 3rem 4rem; */
     }
 
     .card {
@@ -164,7 +154,7 @@ button:disabled {
     main {
         max-width: 2500px;
         width: 100%;
-        padding: 2.5rem 3.5rem;
+        /* padding: 2.5rem 3.5rem; */
     }
 
     .card {
@@ -177,7 +167,7 @@ button:disabled {
     main {
         max-width: 2500px;
         width: 100%;
-        padding: 2rem 3rem;
+        /* padding: 2rem 3rem; */
     }
 
     .card {
@@ -190,7 +180,7 @@ button:disabled {
     main {
         max-width: 2500px;
         width: 100%;
-        padding: 2rem 2.5rem;
+        /* padding: 2rem 2.5rem; */
     }
 
     .card {
@@ -203,7 +193,7 @@ button:disabled {
     main {
         max-width: 2500px;
         width: 100%;
-        padding: 1.75rem 2rem;
+        /* padding: 1.75rem 2rem; */
     }
 
     .card {
@@ -218,7 +208,7 @@ button:disabled {
     }
 
     main {
-        padding: 1.5rem;
+        /* padding: 1.5rem; */
         width: 100%;
     }
 

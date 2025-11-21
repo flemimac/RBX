@@ -2,6 +2,7 @@ import React, { useState, FormEvent } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../contexts';
 import { ROUTES } from '../../config/constants';
+import './Login.css';
 
 export const Login: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -32,37 +33,41 @@ export const Login: React.FC = () => {
   };
 
   return (
-    <section className="card auth-only">
-      <form onSubmit={handleSubmit}>
-        <h2>Вход</h2>
-        <label>
-          Email
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </label>
-        <label>
-          Пароль
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </label>
-        <button type="submit">Войти</button>
-        <p className="form-status" style={{ color: isError ? '#dc2626' : '#475569' }}>
-          {status}
-        </p>
-        <p className="hint">
-          Нет аккаунта?<span> </span>
-          <Link to={ROUTES.REGISTER}>Зарегистрируйтесь</Link>
-        </p>
-      </form>
-    </section>
+    <div className="auth-container">
+      <section className="auth-card">
+        <form onSubmit={handleSubmit}>
+          <label>
+            <span>Email</span>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Email"
+              required
+            />
+          </label>
+          <label>
+            <span>Пароль</span>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Пароль"
+              required
+            />
+          </label>
+          <button type="submit">Войти</button>
+          {status && (
+            <p className={`auth-status ${isError ? 'error' : 'success'}`}>
+              {status}
+            </p>
+          )}
+          <p className="auth-hint">
+            Нет аккаунта? <Link to={ROUTES.REGISTER}>Зарегистрируйтесь</Link>
+          </p>
+        </form>
+      </section>
+    </div>
   );
 };
 

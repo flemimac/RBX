@@ -1,35 +1,70 @@
+.add-route-form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
 .add-route-form {
-  background: white;
-  border: 1px solid #e2e8f0;
+  background: #2d2d2d;
+  border: 1px solid #3d3d3d;
   border-radius: 12px;
   padding: 1.5rem;
-  margin-top: 1.5rem;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.add-route-form-title {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #e5e7eb;
 }
 
 .add-route-form-group {
   margin-bottom: 1.5rem;
 }
 
-.add-route-form-group:last-of-type {
-  margin-bottom: 0;
+.add-route-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #9ca3af;
 }
 
 .route-name-input,
 .route-description-input {
   width: 100%;
   padding: 0.75rem;
-  border: 1px solid #cbd5e1;
+  border: 1px solid #4b5563;
   border-radius: 8px;
   font-size: 1rem;
   font-family: inherit;
   box-sizing: border-box;
+  background: #1a1a1a;
+  color: #e5e7eb;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.route-name-input::placeholder,
+.route-description-input::placeholder {
+  color: #6b7280;
 }
 
 .route-name-input:focus,
 .route-description-input:focus {
   outline: none;
   border-color: #2563eb;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
 }
 
 .route-description-input {
@@ -63,11 +98,11 @@
 }
 
 .btn-cancel {
-  background: #f1f5f9;
-  color: #64748b;
+  background: #3d3d3d;
+  color: #e5e7eb;
 }
 
 .btn-cancel:hover {
-  background: #e2e8f0;
+  background: #4b5563;
 }
 

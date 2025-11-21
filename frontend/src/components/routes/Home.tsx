@@ -1,21 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import { useAuth } from '../../contexts';
 import { apiService } from '../../services';
 import { fileStorage } from '../../utils';
 import type { Route } from '../../types';
-import { RouteItem } from './RouteItem';
+import { RouteList } from './RouteList';
+import { RouteView } from './RouteView';
 import { AddRouteForm } from './AddRouteForm';
-import { RouteGalleryModal } from './RouteGalleryModal';
 import { EditRouteModal } from './EditRouteModal';
 import { ConfirmModal } from '../ui/ConfirmModal';
 import './Home.css';
 
 export const Home: React.FC = () => {
-  const { user, logout } = useAuth();
   const [routes, setRoutes] = useState<Route[]>([]);
   const [loading, setLoading] = useState(false);
-  const [showAddForm, setShowAddForm] = useState(false);
   const [selectedRoute, setSelectedRoute] = useState<Route | null>(null);
+  const [showAddForm, setShowAddForm] = useState(false);
   const [routeToDelete, setRouteToDelete] = useState<Route | null>(null);
   const [routeToEdit, setRouteToEdit] = useState<Route | null>(null);
 
@@ -74,7 +72,7 @@ export const Home: React.FC = () => {
     }
   };
 
-  const handleRouteInfo = (route: Route) => {
+  const handleSelectRoute = (route: Route) => {
     setSelectedRoute(route);
   };
 
@@ -92,6 +90,9 @@ export const Home: React.FC = () => {
             : route
         )
       );
+      if (selectedRoute?.id === id) {
+        setSelectedRoute({ ...updatedRoute, fileCount: selectedRoute.fileCount });
+      }
       setRouteToEdit(null);
     } catch (error) {
       console.error('Не удалось обновить маршрут:', error);
@@ -103,6 +104,12 @@ export const Home: React.FC = () => {
     try {
       await fileStorage.saveFiles(routeId, files);
       await fetchRoutes();
+      if (selectedRoute?.id === routeId) {
+        const updatedRoute = routes.find((r) => r.id === routeId);
+        if (updatedRoute) {
+          setSelectedRoute(updatedRoute);
+        }
+      }
     } catch (error) {
       console.error('Не удалось сохранить файлы:', error);
       const errorMessage = error instanceof Error ? error.message : 'Неизвестная ошибка';
@@ -111,62 +118,32 @@ export const Home: React.FC = () => {
   };
 
   return (
-    <section className="home-wrapper">
-      <div className="home-main-layout">
-        <aside className="home-sidebar">
-          <div className="home-sidebar-card">
-            <p className="home-welcome-text">Добро пожаловать</p>
-            <h2 className="home-user-display">
-              {user?.full_name || user?.email || 'Пользователь'}
-            </h2>
-            <button className="home-logout-button" onClick={logout}>
-              Выйти
-            </button>
-          </div>
-        </aside>
+    <div className="home-container">
+      <div className="home-layout">
+        <div className="home-sidebar">
+          <RouteList
+            routes={routes}
+            selectedRouteId={selectedRoute?.id || null}
+            onSelectRoute={handleSelectRoute}
+            onAddRoute={() => setShowAddForm(true)}
+            loading={loading}
+          />
+        </div>
 
-        <div className="home-content-area">
-          <div className="home-routes-container">
-            {loading ? (
-              <div className="home-loading-message">Загрузка маршрутов...</div>
-            ) : routes.length === 0 ? (
-              <div className="home-empty-message">
-                <p>Нет маршрутов. Добавьте первый маршрут.</p>
-              </div>
-            ) : (
-              routes.map((route) => (
-                <RouteItem
-                  key={route.id}
-                  route={route}
-                  onDelete={() => handleDeleteRoute(route)}
-                  onInfo={handleRouteInfo}
-                  onEdit={handleEditRoute}
-                  onFilesUpload={handleFilesUpload}
-                />
-              ))
-            )}
-
-            {showAddForm ? (
-              <AddRouteForm
-                onAdd={handleAddRoute}
-                onCancel={() => setShowAddForm(false)}
-              />
-            ) : (
-              <button
-                className="home-add-route-button"
-                onClick={() => setShowAddForm(true)}
-              >
-                + Добавить маршрут
-              </button>
-            )}
-          </div>
+        <div className="home-main">
+          <RouteView
+            route={selectedRoute}
+            onFilesUpload={handleFilesUpload}
+            onEdit={handleEditRoute}
+            onDelete={handleDeleteRoute}
+          />
         </div>
       </div>
 
-      {selectedRoute && (
-        <RouteGalleryModal
-          route={selectedRoute}
-          onClose={() => setSelectedRoute(null)}
+      {showAddForm && (
+        <AddRouteForm
+          onAdd={handleAddRoute}
+          onCancel={() => setShowAddForm(false)}
         />
       )}
 
@@ -190,6 +167,6 @@ export const Home: React.FC = () => {
           onCancel={() => setRouteToDelete(null)}
         />
       )}
-    </section>
+    </div>
   );
 };

@@ -13,12 +13,13 @@
 }
 
 .edit-route-modal-content {
-  background: white;
+  background: #2d2d2d;
+  border: 1px solid #3d3d3d;
   border-radius: 12px;
   padding: 1.5rem;
   width: 100%;
   max-width: 500px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
   max-height: 90vh;
   overflow-y: auto;
   box-sizing: border-box;
@@ -28,7 +29,7 @@
   margin: 0 0 1.5rem 0;
   font-size: 1.5rem;
   font-weight: 600;
-  color: #1f2937;
+  color: #e5e7eb;
 }
 
 .edit-route-form-group {
@@ -40,26 +41,33 @@
   margin-bottom: 0.5rem;
   font-size: 0.875rem;
   font-weight: 500;
-  color: #374151;
+  color: #9ca3af;
 }
 
 .edit-route-input,
 .edit-route-textarea {
   width: 100%;
   padding: 0.75rem;
-  border: 1px solid #cbd5e1;
+  border: 1px solid #4b5563;
   border-radius: 8px;
   font-size: 1rem;
   font-family: inherit;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
   box-sizing: border-box;
+  background: #1a1a1a;
+  color: #e5e7eb;
+}
+
+.edit-route-input::placeholder,
+.edit-route-textarea::placeholder {
+  color: #6b7280;
 }
 
 .edit-route-input:focus,
 .edit-route-textarea:focus {
   outline: none;
   border-color: #2563eb;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
 }
 
 .edit-route-textarea {
@@ -85,12 +93,12 @@
 }
 
 .edit-route-btn-cancel {
-  background: #f1f5f9;
-  color: #64748b;
+  background: #3d3d3d;
+  color: #e5e7eb;
 }
 
 .edit-route-btn-cancel:hover {
-  background: #e2e8f0;
+  background: #4b5563;
 }
 
 .edit-route-btn-save {

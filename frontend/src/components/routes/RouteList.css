@@ -1,0 +1,239 @@
+.route-list-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #1a1a1a;
+  border-right: 1px solid #2d2d2d;
+}
+
+.route-list-search {
+  padding: 1rem;
+  border-bottom: 1px solid #2d2d2d;
+  position: relative;
+}
+
+.route-list-search-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.route-list-menu-button {
+  padding: 0.5rem;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  color: #e5e7eb;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.route-list-menu-button:hover {
+  background: #2d2d2d;
+}
+
+.search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.search-icon {
+  position: absolute;
+  left: 0.75rem;
+  color: #6b7280;
+  pointer-events: none;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+  background: #2d2d2d;
+  border: 1px solid #3d3d3d;
+  border-radius: 40px;
+  color: #e5e7eb;
+  font-size: 0.875rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.search-input:focus {
+  border-color: #4b5563;
+}
+
+.search-input::placeholder {
+  color: #6b7280;
+}
+
+.route-list-items {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0.5rem;
+}
+
+.route-list-items::-webkit-scrollbar {
+  width: 6px;
+}
+
+.route-list-items::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.route-list-items::-webkit-scrollbar-thumb {
+  background: #4b5563;
+  border-radius: 3px;
+}
+
+.route-list-items::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+.route-list-item {
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  background: #2d2d2d;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.route-list-item:hover {
+  background: #353535;
+  border-color: #4b5563;
+}
+
+.route-list-item.active {
+  background: #3d3d3d;
+  border-color: #4b5563;
+}
+
+.route-list-item-header {
+  margin-bottom: 0.5rem;
+}
+
+.route-list-item-name {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #e5e7eb;
+  word-break: break-word;
+}
+
+.route-list-item-description {
+  margin: 0.5rem 0 0 0;
+  font-size: 0.875rem;
+  color: #9ca3af;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.route-list-item-meta {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.route-list-item-files {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.route-list-loading,
+.route-list-empty {
+  padding: 2rem;
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.route-list-add-button {
+  margin: 1rem;
+  padding: 1rem;
+  background: #2d2d2d;
+  border: 1px solid #3d3d3d;
+  border-radius: 12px;
+  color: #e5e7eb;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.route-list-add-button:hover {
+  background: #353535;
+  border-color: #4b5563;
+}
+
+.route-list-menu-dropdown {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  right: 0;
+  background: #2d2d2d;
+  border: 1px solid #3d3d3d;
+  border-radius: 12px;
+  padding: 1rem;
+  z-index: 100;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.route-list-menu-user {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #3d3d3d;
+}
+
+.route-list-menu-user-label {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.75rem;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.route-list-menu-user-name {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #e5e7eb;
+  word-break: break-word;
+}
+
+.route-list-menu-logout {
+  width: 100%;
+  padding: 0.75rem;
+  background: #dc2626;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 500;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.route-list-menu-logout:hover {
+  background: #b91c1c;
+}

@@ -2,6 +2,7 @@ import React, { useState, FormEvent } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../contexts';
 import { ROUTES } from '../../config/constants';
+import './Register.css';
 
 export const Register: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -35,49 +36,51 @@ export const Register: React.FC = () => {
   };
 
   return (
-    <section className="card auth-only">
-      <form onSubmit={handleSubmit}>
-        <h2>Создать аккаунт</h2>
-        <label>
-          Email
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            placeholder="Введите email"
-          />
-        </label>
-        <label>
-          Логин
-          <input
-            type="text"
-            value={fullName}
-            onChange={(e) => setFullName(e.target.value)}
-            placeholder="Введите логин"
-          />
-        </label>
-        <label>
-          Пароль (мин. 6 символов)
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-            minLength={6}
-            placeholder="Введите пароль"
-          />
-        </label>
-        <button type="submit">Зарегистрироваться</button>
-        <p className="form-status" style={{ color: isError ? '#dc2626' : '#475569' }}>
-          {status}
-        </p>
-        <p className="hint">
-          Уже есть аккаунт? <span> </span>
-          <Link to={ROUTES.LOGIN}>Войти</Link>
-        </p>
-      </form>
-    </section>
+    <div className="auth-container">
+      <section className="auth-card">
+        <form onSubmit={handleSubmit}>
+          <label>
+            <span>Email</span>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Email"
+              required
+            />
+          </label>
+          <label>
+            <span>Логин</span>
+            <input
+              type="text"
+              value={fullName}
+              onChange={(e) => setFullName(e.target.value)}
+              placeholder="Логин"
+            />
+          </label>
+          <label>
+            <span>Пароль</span>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Пароль"
+              required
+              minLength={6}
+            />
+          </label>
+          <button type="submit">Зарегистрироваться</button>
+          {status && (
+            <p className={`auth-status ${isError ? 'error' : 'success'}`}>
+              {status}
+            </p>
+          )}
+          <p className="auth-hint">
+            Уже есть аккаунт? <Link to={ROUTES.LOGIN}>Войти</Link>
+          </p>
+        </form>
+      </section>
+    </div>
   );
 };
 

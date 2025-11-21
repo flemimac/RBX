@@ -1,0 +1,110 @@
+{
+  "821484a7-2db8-44a3-873b-117e387ef15f": {
+    "original_name": "tcrung_ct_614_jpg.rf.c57f19558d63b84687feb97e3b4bca2e.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 1,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 1
+  },
+  "fecfd205-dcca-44a1-b62c-9db865c6721a": {
+    "original_name": "tcrung_ct_617_jpg.rf.76132fcd15bdc9dfe40efadcb8c47b98.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 1,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 1
+  },
+  "e5117c76-738f-4343-8260-7f0356826940": {
+    "original_name": "tcrung_ct_618_jpg.rf.eb1f977da5ddd04578092b50d6e07e10.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 1,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 1
+  },
+  "1e5c1864-3bc0-4af2-9916-22a133087019": {
+    "original_name": "tcrung_ct_620_jpg.rf.852cbfc2b5f5a166ff624de06318c80a.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 1,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 1
+  },
+  "2f4b9809-24cd-493c-9e9e-3e648e93916f": {
+    "original_name": "Thuy-tinh-1-_jpg.rf.7d5ad3a46e81d643e2598e7e0b151ae9.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 2,
+    "green_detection_count": 1,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 3
+  },
+  "c1dfbb54-a29f-4a62-8066-97568f8d5d88": {
+    "original_name": "z3954402268499_aed9fb91abcd5e6a18f59ef0f66f849e_jpg.rf.7eae65dcd6400f98161bbd439abc889a.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 1,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 1
+  },
+  "97c5cb1a-8810-4b81-9fa2-070a68a3f3ec": {
+    "original_name": "z3954402338014_3af0b1239a2b695342e80749b06d6e96_jpg.rf.05d590620e12002541543594593213cc.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 2,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 2
+  },
+  "ff3d486c-a3ac-4bc2-bcd4-7e3fb90bb36d": {
+    "original_name": "tcrung_ct_606_jpg.rf.d90949cca6b1e7dc631e416cc80a993e.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 1,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 1
+  },
+  "34db337a-825b-4e61-b284-42d9f6971769": {
+    "original_name": "tcrung_ct_607_jpg.rf.ab9f89b239511dae6e1659fc2073d2d8.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 1,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 1
+  },
+  "40b29e20-4522-42e6-bd59-30d843313698": {
+    "original_name": "tcrung_ct_609_jpg.rf.e97669271f0aa38835d38306a8828b0d.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 1,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 1
+  },
+  "799980eb-d5c7-4326-84bb-c7f3221957c5": {
+    "original_name": "tcrung_ct_611_jpg.rf.73589225f74c1762ffccf5eaa0e3887b.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 1,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 1
+  },
+  "89221267-40e0-41a1-a360-1e7dcc0e4410": {
+    "original_name": "tcrung_ct_613_jpg.rf.dc8a8e03f568238c3a2411fce9276a11.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 1,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 1
+  }
+}

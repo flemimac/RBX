@@ -16,6 +16,7 @@ export const Home: React.FC = () => {
   const [showAddForm, setShowAddForm] = useState(false);
   const [routeToDelete, setRouteToDelete] = useState<Route | null>(null);
   const [routeToEdit, setRouteToEdit] = useState<Route | null>(null);
+  const [uploadProgress, setUploadProgress] = useState<{ current: number; total: number } | null>(null);
 
   const fetchRoutes = async () => {
     setLoading(true);
@@ -66,12 +67,38 @@ export const Home: React.FC = () => {
       // Выбираем созданный маршрут
       setSelectedRoute(routeWithFileCount);
 
-      // Загружаем файлы в созданный маршрут
-      await handleFilesUpload(newRoute.id, files);
+      // Загружаем файлы по одному для отслеживания прогресса
+      setUploadProgress({ current: 0, total: files.length });
+
+      for (let i = 0; i < files.length; i++) {
+        try {
+          await apiService.uploadSingleFile(newRoute.id, files[i]);
+          setUploadProgress({ current: i + 1, total: files.length });
+        } catch (fileError) {
+          console.error(`Ошибка загрузки файла ${files[i].name}:`, fileError);
+          // Продолжаем загрузку остальных файлов
+        }
+      }
+
+      // Обновляем список маршрутов после загрузки
+      const data = await apiService.getRoutes();
+      const routesWithFileCounts = await Promise.all(
+        data.map(async (route) => {
+          const fileCount = await fileStorage.getFileCount(route.id);
+          return { ...route, fileCount };
+        })
+      );
+      setRoutes(routesWithFileCounts);
+      const updatedRoute = routesWithFileCounts.find((r) => r.id === newRoute.id);
+      if (updatedRoute) {
+        setSelectedRoute(updatedRoute);
+      }
     } catch (error) {
       console.error('Не удалось создать маршрут с файлами:', error);
       alert('Не удалось создать маршрут с файлами');
       throw error;
+    } finally {
+      setUploadProgress(null);
     }
   };
 
@@ -173,6 +200,7 @@ export const Home: React.FC = () => {
             onDelete={handleDeleteRoute}
             onAddRoute={() => setShowAddForm(true)}
             onCreateRouteWithFiles={handleCreateRouteWithFiles}
+            uploadProgress={uploadProgress}
           />
         </div>
       </div>

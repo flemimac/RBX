@@ -1,0 +1,146 @@
+{
+  "902c5653-44d2-4125-8404-cf15ddbf5930": {
+    "original_name": "z3941022678309_874d992ff1f36e42abfbd016189aa3de_jpg.rf.5f659d21cd0b0ce2e9fc4b12a153fe9d.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 3,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 3
+  },
+  "be3e0749-94d3-4a24-bcb4-90f25331f772": {
+    "original_name": "z3941022696364_2fd72c08e48040474d0cbc15593d44f1_jpg.rf.05b5afd7a1fdae9b29c12ff4caaa3e8e.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 3,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 3
+  },
+  "3c19eda0-6bc2-4e29-b689-254dc8831525": {
+    "original_name": "z3941022809586_aac3b2ea974218cf76bb9190c73e93fa_jpg.rf.423206efb71a87ea685cb060b91ea5eb.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 5,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 6
+  },
+  "d7ce57d8-7e09-419a-88c3-76b4aa90b6fc": {
+    "original_name": "z3941022834329_24d0e52246bdd41bc5142aa20eefd8ac_jpg.rf.fe8543e7bd458961ecce1a8631270bd8.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 2,
+    "green_detection_count": 8,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 10
+  },
+  "d0b7c19d-5d79-41a2-9b75-8b370648756f": {
+    "original_name": "z3941022883026_39708a35cbb7b9a7a70732007f620f25_jpg.rf.cbc84a39f9036436ced8a43580603226.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 7,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 8
+  },
+  "46212ef2-84f7-4828-80ea-45be9c9b569c": {
+    "original_name": "z3941022894431_89319cec126f1117034fd50d54ea6b64_jpg.rf.9b30c5ad447dc4898e3993add67d950a.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 1,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 2
+  },
+  "e56703a0-cbe7-44c8-b329-05f0be65fd95": {
+    "original_name": "z3941022943166_c6581d491afc21b65e67140872584168_jpg.rf.68e53842aa0a2b5c85d8fd67f4907418.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 2,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 3
+  },
+  "c6845e36-3186-4b99-9c3d-ba9c92b23989": {
+    "original_name": "z3941023044265_87b0cf215925d41e50c4453b89991cc7_jpg.rf.feb8a3a62c95f6f6257d944a60fa33ac.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 10,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 11
+  },
+  "3394a8ca-27e5-473f-9050-d6c27d08046a": {
+    "original_name": "z3941023081872_59359fb4c6bd7ae7497932275a1dc0d4_jpg.rf.b69bb11ac0d435fb43878bffe08dadde.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 9,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 10
+  },
+  "060f52a6-be0f-4d0d-98e5-f84e10a65044": {
+    "original_name": "z3941023127478_59584b025fef63176fb5b545efc0bd1e_jpg.rf.cd24244a626b2633d5c0a4c5d359a38d.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 2,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 3
+  },
+  "2f5c4d22-702f-464b-bf99-f8d139fe51a7": {
+    "original_name": "z3943444262130_80f1886bb83b4fdcb4824f04dc930e06_jpg.rf.17f11ad3d3525aff39fed6279cc80836.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 4,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 5
+  },
+  "e7042147-7571-4a26-ba5b-f72550994aa3": {
+    "original_name": "z3941022437768_c06941c416dd4256baa457e9b98b646b_jpg.rf.342b1c09437f76a5ae73559df1efcb0c.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 1
+  },
+  "4f83a863-2f8d-4e1e-b6f0-3a036ccd5eed": {
+    "original_name": "z3941022500791_de9f2db90359b0633b29df46f9bffb72_jpg.rf.c7824f3fd20f9b4fa4e555a20003e9a9.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 1
+  },
+  "74355488-1eba-4662-863c-e428e5e38cf2": {
+    "original_name": "z3941022579977_8a3cf89fa56f70d801c30877088645d5_jpg.rf.d0c3a5e83540753d16ac7003261f5271.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 3,
+    "green_detection_count": 5,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 8
+  },
+  "fdb5eb00-77aa-4805-8687-a3bef900608c": {
+    "original_name": "z3941022635675_2550373ce55eff1bf17caaf094d3f1c9_jpg.rf.1a51bc111bf87e8f1aeb8db82eadeb8e.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 3,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 3
+  },
+  "19a9967d-b3ea-46ae-a383-24fdee82f31a": {
+    "original_name": "z3941022374216_be31ab177a706de87e6d98cf73158173_jpg.rf.0910b914afef066f4fb52f01829a1fcc.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 1
+  }
+}

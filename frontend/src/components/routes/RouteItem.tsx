@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './RouteItem.css';
 import { DragDropZone } from '../ui/DragDropZone';
 import { validateFiles } from '../../utils';
+import { apiService } from '../../services';
 import type { Route } from '../../types';
 
 interface RouteItemProps {
@@ -20,6 +21,7 @@ export const RouteItem: React.FC<RouteItemProps> = ({
   onFilesUpload,
 }) => {
   const [uploading, setUploading] = useState(false);
+  const [uploadProgress, setUploadProgress] = useState<{ current: number; total: number } | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   const truncateDescription = (text: string, maxLength: number = 150): string => {
@@ -42,6 +44,20 @@ export const RouteItem: React.FC<RouteItemProps> = ({
 
       if (valid.length > 0) {
         try {
+          // Загружаем файлы по одному для отслеживания прогресса
+          setUploadProgress({ current: 0, total: valid.length });
+
+          for (let i = 0; i < valid.length; i++) {
+            try {
+              await apiService.uploadSingleFile(route.id, valid[i]);
+              setUploadProgress({ current: i + 1, total: valid.length });
+            } catch (fileError) {
+              console.error(`Ошибка загрузки файла ${valid[i].name}:`, fileError);
+              // Продолжаем загрузку остальных файлов
+            }
+          }
+
+          // Обновляем состояние через onFilesUpload
           await onFilesUpload(route.id, valid);
         } catch (uploadError) {
           const errorMsg = uploadError instanceof Error ? uploadError.message : 'Не удалось сохранить файлы';
@@ -57,6 +73,7 @@ export const RouteItem: React.FC<RouteItemProps> = ({
       console.error('Ошибка загрузки файлов:', err);
     } finally {
       setUploading(false);
+      setUploadProgress(null);
     }
   };
 
@@ -73,9 +90,11 @@ export const RouteItem: React.FC<RouteItemProps> = ({
         </div>
         <div className="route-dragdrop-section">
           <DragDropZone onFilesDropped={handleFilesDropped} />
-          {uploading && (
+          {uploading && uploadProgress ? (
+            <div className="upload-status">Загрузка файлов... ({uploadProgress.current}/{uploadProgress.total})</div>
+          ) : uploading ? (
             <div className="upload-status">Загрузка файлов...</div>
-          )}
+          ) : null}
           {error && (
             <div className="upload-error">{error}</div>
           )}

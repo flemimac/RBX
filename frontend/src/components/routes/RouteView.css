@@ -132,6 +132,7 @@
   border-radius: 8px;
   border: 1px solid #3d3d3d;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .route-view-stats-item {
@@ -172,6 +173,26 @@
 
 .route-view-stats-red .route-view-stats-value {
   color: #dc2626;
+}
+
+.route-view-filter-btn {
+  margin-left: auto;
+  padding: 0.5rem;
+  background: #2d2d2d;
+  border: 1px solid #3d3d3d;
+  border-radius: 8px;
+  color: #e5e7eb;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.route-view-filter-btn:hover {
+  background: #353535;
+  border-color: #10b981;
+  color: #10b981;
 }
 
 .route-view-header-actions {
@@ -311,6 +332,7 @@
 }
 
 .route-view-image-error {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -320,6 +342,12 @@
   color: #ef4444;
   text-align: center;
   font-size: 0.875rem;
+}
+
+.route-view-image-error .route-view-image-actions {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
 }
 
 .route-view-image-error p {
@@ -338,3 +366,64 @@
   color: #6b7280;
 }
 
+.route-view-image-actions {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+.route-view-save-image-btn,
+.route-view-delete-image-btn {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  opacity: 1;
+  backdrop-filter: blur(4px);
+}
+
+.route-view-save-image-btn {
+  background: rgba(16, 185, 129, 0.9);
+}
+
+.route-view-save-image-btn:hover {
+  background: rgba(16, 185, 129, 1);
+  transform: scale(1.1);
+}
+
+.route-view-save-image-btn:active {
+  transform: scale(0.95);
+}
+
+.route-view-save-image-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.route-view-save-image-btn:disabled:hover {
+  transform: none;
+  background: rgba(16, 185, 129, 0.9);
+}
+
+.route-view-delete-image-btn {
+  background: rgba(220, 38, 38, 0.9);
+}
+
+.route-view-delete-image-btn:hover {
+  background: rgba(220, 38, 38, 1);
+  transform: scale(1.1);
+}
+
+.route-view-delete-image-btn:active {
+  transform: scale(0.95);
+}

@@ -1,2 +1,2 @@
-export { apiService } from './api';
+export { apiService, type ProcessedFile } from './api';
 

@@ -360,17 +360,34 @@ async def list_route_files(
             
             # Получаем оригинальное имя из метаданных
             original_name = f"image_{file_id}"  # Значение по умолчанию
-            if file_id in metadata and "original_name" in metadata[file_id]:
-                original_name = metadata[file_id]["original_name"]
+            file_meta = metadata.get(file_id, {})
+            if "original_name" in file_meta:
+                original_name = file_meta["original_name"]
             
             # Проверяем, существует ли оригинальный файл
             original_files = list(route_upload_dir.glob(f"{file_id}.*"))
             if original_files and any(f.exists() for f in original_files):
-                processed_files.append({
+                file_data = {
                     "original": original_name,
                     "processed_id": file_id,
                     "processed_path": f"/api/routes/{route_id}/files/{file_id}/processed"
-                })
+                }
+                
+                # Добавляем информацию о детекциях из метаданных
+                if file_id in metadata:
+                    meta = metadata[file_id]
+                    if "green_detection_count" in meta:
+                        file_data["green_detection_count"] = meta.get("green_detection_count", 0)
+                    if "red_detection_count" in meta:
+                        file_data["red_detection_count"] = meta.get("red_detection_count", 0)
+                    if "has_green_detections" in meta:
+                        file_data["has_green_detections"] = meta.get("has_green_detections", False)
+                    if "has_red_detections" in meta:
+                        file_data["has_red_detections"] = meta.get("has_red_detections", False)
+                    if "total_detections" in meta:
+                        file_data["total_detections"] = meta.get("total_detections", 0)
+                
+                processed_files.append(file_data)
 
     return {
         "files": processed_files,

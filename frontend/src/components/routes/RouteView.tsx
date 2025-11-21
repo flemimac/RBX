@@ -5,6 +5,8 @@ import { apiService, type ProcessedFile } from '../../services';
 import type { Route } from '../../types';
 import { ImageModal } from './ImageModal';
 import { CreateRouteWithFilesModal } from './CreateRouteWithFilesModal';
+import { FilterModal, type PriorityMode, type SortMode } from './FilterModal';
+import { ConfirmModal } from '../ui/ConfirmModal';
 import './RouteView.css';
 
 interface RouteViewProps {
@@ -14,6 +16,7 @@ interface RouteViewProps {
   onDelete: (route: Route) => void;
   onAddRoute?: () => void;
   onCreateRouteWithFiles?: (name: string, description: string | undefined, files: File[]) => Promise<void>;
+  uploadProgress?: { current: number; total: number } | null;
 }
 
 interface ProcessedImage {
@@ -21,6 +24,11 @@ interface ProcessedImage {
   originalName: string;
   processedUrl: string;
   error?: string;
+  greenDetectionCount?: number;
+  redDetectionCount?: number;
+  hasGreenDetections?: boolean;
+  hasRedDetections?: boolean;
+  totalDetections?: number;
 }
 
 export const RouteView: React.FC<RouteViewProps> = ({
@@ -30,99 +38,117 @@ export const RouteView: React.FC<RouteViewProps> = ({
   onDelete,
   onAddRoute,
   onCreateRouteWithFiles,
+  uploadProgress: externalUploadProgress,
 }) => {
   const [processedImages, setProcessedImages] = useState<ProcessedImage[]>([]);
   const [loading, setLoading] = useState(false);
   const [uploading, setUploading] = useState(false);
+  const [uploadProgress, setUploadProgress] = useState<{ current: number; total: number } | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [selectedImage, setSelectedImage] = useState<ProcessedImage | null>(null);
+  const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
   const [stats, setStats] = useState<{
     total_processed: number;
     with_green_detections: number;
     with_red_detections: number;
   } | null>(null);
-  const [statsLoading, setStatsLoading] = useState(false);
   const [pendingFiles, setPendingFiles] = useState<File[] | null>(null);
   const [showCreateRouteModal, setShowCreateRouteModal] = useState(false);
+  const [uploadStarted, setUploadStarted] = useState(false);
+  const [showFilterModal, setShowFilterModal] = useState(false);
+  const [usePriority, setUsePriority] = useState(false);
+  const [priorityMode, setPriorityMode] = useState<PriorityMode>('green-first');
+  const [sortMode, setSortMode] = useState<SortMode>('none');
+  const [imageToDelete, setImageToDelete] = useState<ProcessedImage | null>(null);
+
+  const mapFileToProcessedImage = (file: ProcessedFile, routeId: string): ProcessedImage | null => {
+    if (file.processed_id) {
+      return {
+        id: file.processed_id,
+        originalName: file.original,
+        processedUrl: apiService.getProcessedImageUrl(routeId, file.processed_id),
+        error: file.error,
+        greenDetectionCount: file.green_detection_count,
+        redDetectionCount: file.red_detection_count,
+        hasGreenDetections: file.has_green_detections,
+        hasRedDetections: file.has_red_detections,
+        totalDetections: file.total_detections,
+      };
+    } else if (file.error) {
+      return {
+        id: file.file_id || `error-${Date.now()}-${Math.random()}`,
+        originalName: file.original,
+        processedUrl: '',
+        error: file.error,
+      };
+    }
+    return null;
+  };
+
+  const processFilesToImages = (files: ProcessedFile[], routeId: string): ProcessedImage[] => {
+    return files
+      .map((file) => mapFileToProcessedImage(file, routeId))
+      .filter((img): img is ProcessedImage => img !== null);
+  };
+
+  const updateStats = async (routeId: string) => {
+    try {
+      const statsData = await apiService.getRouteStats(routeId);
+      setStats(statsData);
+    } catch (err) {
+      console.error('Ошибка обновления статистики:', err);
+      setStats({
+        total_processed: 0,
+        with_green_detections: 0,
+        with_red_detections: 0,
+      });
+    }
+  };
+
+  const loadFilesAndUpdateImages = async (routeId: string) => {
+    try {
+      const response = await apiService.getRouteFiles(routeId);
+      const images = processFilesToImages(response.files, routeId);
+      setProcessedImages(images);
+    } catch (err) {
+      console.error('Ошибка загрузки файлов маршрута:', err);
+      if (err instanceof Error && !err.message.includes('404')) {
+        setError('Не удалось загрузить файлы маршрута');
+      }
+      setProcessedImages([]);
+    }
+  };
 
   useEffect(() => {
-    const loadRouteFiles = async () => {
-      if (!route) {
-        setProcessedImages([]);
-        setStats(null);
-        return;
-      }
+    if (!route) {
+      setProcessedImages([]);
+      setStats(null);
+      return;
+    }
 
-      setLoading(true);
-      setError(null);
-      
-      try {
-        // Загружаем сохраненные обработанные изображения для маршрута
-        const response = await apiService.getRouteFiles(route.id);
-        
-        // Формируем список обработанных изображений для отображения
-        const images: ProcessedImage[] = response.files
-          .map((file: ProcessedFile) => {
-            if (file.processed_id) {
-              return {
-                id: file.processed_id,
-                originalName: file.original,
-                processedUrl: apiService.getProcessedImageUrl(route.id, file.processed_id),
-                error: file.error,
-              };
-            } else if (file.error) {
-              // Файл с ошибкой обработки
-              return {
-                id: file.file_id || `error-${Date.now()}-${Math.random()}`,
-                originalName: file.original,
-                processedUrl: '',
-                error: file.error,
-              };
-            } else {
-              // Не изображение или обработка недоступна
-              return null;
-            }
-          })
-          .filter((img): img is ProcessedImage => img !== null);
-        
-        setProcessedImages(images);
-      } catch (err) {
-        console.error('Ошибка загрузки файлов маршрута:', err);
-        // Не показываем ошибку, если просто нет файлов
-        if (err instanceof Error && !err.message.includes('404')) {
-          setError('Не удалось загрузить файлы маршрута');
-        }
-        setProcessedImages([]);
-      } finally {
-        setLoading(false);
-      }
+    setLoading(true);
+    setError(null);
+
+    const loadData = async () => {
+      await Promise.all([
+        loadFilesAndUpdateImages(route.id),
+        updateStats(route.id),
+      ]);
+      setLoading(false);
     };
 
-    const loadStats = async () => {
-      if (!route) {
-        setStats(null);
-        return;
-      }
-
-      setStatsLoading(true);
-      try {
-        const statsData = await apiService.getRouteStats(route.id);
-        setStats(statsData);
-      } catch (err) {
-        console.error('Ошибка загрузки статистики маршрута:', err);
-        setStats({
-          total_processed: 0,
-          with_green_detections: 0,
-          with_red_detections: 0,
-        });
-      } finally {
-        setStatsLoading(false);
-      }
-    };
-
-    loadRouteFiles();
-    loadStats();
+    loadData();
   }, [route]);
+
+  // Закрываем модальное окно после завершения загрузки
+  useEffect(() => {
+    // Если загрузка была начата и теперь завершена (externalUploadProgress стал null)
+    if (uploadStarted && externalUploadProgress === null && showCreateRouteModal && pendingFiles) {
+      // Загрузка завершена, закрываем модальное окно
+      setShowCreateRouteModal(false);
+      setPendingFiles(null);
+      setUploadStarted(false);
+    }
+  }, [externalUploadProgress, showCreateRouteModal, pendingFiles, uploadStarted]);
 
   const handleFilesDropped = async (files: File[]) => {
     if (!route) return;
@@ -139,39 +165,21 @@ export const RouteView: React.FC<RouteViewProps> = ({
 
       if (valid.length > 0) {
         try {
-          // Загружаем файлы через API и получаем обработанные изображения
-          const response = await apiService.uploadFiles(route.id, valid);
-          
-          // Формируем список обработанных изображений для отображения
-          const images: ProcessedImage[] = response.processed_files
-            .map((file: ProcessedFile) => {
-              if (file.processed_id) {
-                return {
-                  id: file.processed_id,
-                  originalName: file.original,
-                  processedUrl: apiService.getProcessedImageUrl(route.id, file.processed_id),
-                  error: file.error,
-                };
-              } else if (file.error) {
-                // Файл с ошибкой обработки
-                return {
-                  id: file.file_id || `error-${Date.now()}-${Math.random()}`,
-                  originalName: file.original,
-                  processedUrl: '',
-                  error: file.error,
-                };
-              } else {
-                // Не изображение или обработка недоступна
-                return null;
-              }
-            })
-            .filter((img): img is ProcessedImage => img !== null);
-          
-          // После загрузки и обработки, перезагружаем список файлов с сервера
-          // Это гарантирует, что мы получим актуальный список после обработки и удаления дубликатов
+          // Загружаем файлы по одному для отслеживания прогресса
+          setUploadProgress({ current: 0, total: valid.length });
+
+          for (let i = 0; i < valid.length; i++) {
+            try {
+              await apiService.uploadSingleFile(route.id, valid[i]);
+              setUploadProgress({ current: i + 1, total: valid.length });
+            } catch (fileError) {
+              console.error(`Ошибка загрузки файла ${valid[i].name}:`, fileError);
+              // Продолжаем загрузку остальных файлов
+            }
+          }
+
           await new Promise(resolve => setTimeout(resolve, 800));
-          
-          // Используем retry механизм на случай, если файлы еще не готовы
+
           let filesResponse;
           let retries = 3;
           while (retries > 0) {
@@ -186,46 +194,16 @@ export const RouteView: React.FC<RouteViewProps> = ({
               }
             }
           }
-          
+
           if (filesResponse) {
-            const allImages: ProcessedImage[] = filesResponse.files
-              .map((file: ProcessedFile) => {
-                if (file.processed_id) {
-                  return {
-                    id: file.processed_id,
-                    originalName: file.original,
-                    processedUrl: apiService.getProcessedImageUrl(route.id, file.processed_id),
-                    error: file.error,
-                  };
-                } else if (file.error) {
-                  return {
-                    id: file.file_id || `error-${Date.now()}-${Math.random()}`,
-                    originalName: file.original,
-                    processedUrl: '',
-                    error: file.error,
-                  };
-                } else {
-                  return null;
-                }
-              })
-              .filter((img): img is ProcessedImage => img !== null);
-            
-            // Полностью заменяем список изображений
+            const allImages = processFilesToImages(filesResponse.files, route.id);
             setProcessedImages([]);
             await new Promise(resolve => setTimeout(resolve, 50));
             setProcessedImages(allImages);
           }
-          
-          // Обновляем статистику после загрузки файлов
-          try {
-            await new Promise(resolve => setTimeout(resolve, 1500));
-            const statsData = await apiService.getRouteStats(route.id);
-            setStats(statsData);
-          } catch (err) {
-            console.error('Ошибка обновления статистики:', err);
-          }
-          
-          // Вызываем callback для обновления состояния в родительском компоненте
+
+          await new Promise(resolve => setTimeout(resolve, 1500));
+          await updateStats(route.id);
           await onFilesUpload(route.id, valid);
         } catch (uploadError) {
           const errorMsg =
@@ -245,12 +223,67 @@ export const RouteView: React.FC<RouteViewProps> = ({
       console.error('Ошибка загрузки файлов:', err);
     } finally {
       setUploading(false);
+      setUploadProgress(null);
     }
   };
 
   const handleImageClick = (image: ProcessedImage) => {
     if (!image.error && image.processedUrl) {
-      setSelectedImage(image);
+      const filteredImages = getFilteredAndSortedImages(processedImages);
+      const validImages = filteredImages.filter(img => !img.error && img.processedUrl);
+      const index = validImages.findIndex(img => img.id === image.id);
+      if (index !== -1) {
+        setSelectedImageIndex(index);
+      }
+    }
+  };
+
+  const handleDeleteImageClick = (image: ProcessedImage) => {
+    setImageToDelete(image);
+  };
+
+  const handleSaveImage = async (image: ProcessedImage) => {
+    try {
+      const response = await fetch(image.processedUrl);
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = image.originalName || `image-${image.id}.jpg`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error('Ошибка сохранения изображения:', error);
+      const errorMsg = error instanceof Error ? error.message : 'Не удалось сохранить изображение';
+      setError(errorMsg);
+    }
+  };
+
+  const confirmDeleteImage = async () => {
+    if (!route || !imageToDelete) return;
+
+    const image = imageToDelete;
+    setImageToDelete(null);
+
+    try {
+      await apiService.deleteFile(route.id, image.id);
+      const filesResponse = await apiService.getRouteFiles(route.id);
+      const allImages = processFilesToImages(filesResponse.files, route.id);
+      setProcessedImages(allImages);
+      await updateStats(route.id);
+
+      const validImages = allImages.filter(img => !img.error && img.processedUrl);
+      if (validImages.length === 0) {
+        setSelectedImageIndex(null);
+      } else if (selectedImageIndex !== null && selectedImageIndex >= validImages.length) {
+        setSelectedImageIndex(validImages.length - 1);
+      }
+    } catch (error) {
+      console.error('Ошибка удаления изображения:', error);
+      const errorMsg = error instanceof Error ? error.message : 'Не удалось удалить изображение';
+      setError(errorMsg);
     }
   };
 
@@ -259,44 +292,16 @@ export const RouteView: React.FC<RouteViewProps> = ({
 
     try {
       await apiService.deleteFile(route.id, image.id);
-      
-      // Перезагружаем список файлов после удаления
       const filesResponse = await apiService.getRouteFiles(route.id);
-      const allImages: ProcessedImage[] = filesResponse.files
-        .map((file: ProcessedFile) => {
-          if (file.processed_id) {
-            return {
-              id: file.processed_id,
-              originalName: file.original,
-              processedUrl: apiService.getProcessedImageUrl(route.id, file.processed_id),
-              error: file.error,
-            };
-          } else if (file.error) {
-            return {
-              id: file.file_id || `error-${Date.now()}-${Math.random()}`,
-              originalName: file.original,
-              processedUrl: '',
-              error: file.error,
-            };
-          } else {
-            return null;
-          }
-        })
-        .filter((img): img is ProcessedImage => img !== null);
-      
+      const allImages = processFilesToImages(filesResponse.files, route.id);
       setProcessedImages(allImages);
-      
-      // Обновляем статистику после удаления
-      try {
-        const statsData = await apiService.getRouteStats(route.id);
-        setStats(statsData);
-      } catch (err) {
-        console.error('Ошибка обновления статистики:', err);
-      }
-      
-      // Закрываем модалку если удалили текущее изображение
-      if (selectedImage && selectedImage.id === image.id) {
-        setSelectedImage(null);
+      await updateStats(route.id);
+
+      const validImages = allImages.filter(img => !img.error && img.processedUrl);
+      if (validImages.length === 0) {
+        setSelectedImageIndex(null);
+      } else if (selectedImageIndex !== null && selectedImageIndex >= validImages.length) {
+        setSelectedImageIndex(validImages.length - 1);
       }
     } catch (error) {
       console.error('Ошибка удаления изображения:', error);
@@ -318,6 +323,7 @@ export const RouteView: React.FC<RouteViewProps> = ({
       if (valid.length > 0) {
         setPendingFiles(valid);
         setShowCreateRouteModal(true);
+        setUploadStarted(false); // Сбрасываем флаг при открытии модального окна
       }
     } catch (err) {
       console.error('Ошибка валидации файлов:', err);
@@ -328,12 +334,73 @@ export const RouteView: React.FC<RouteViewProps> = ({
     if (!pendingFiles || !onCreateRouteWithFiles) return;
 
     try {
+      setUploadStarted(true);
       await onCreateRouteWithFiles(name, description, pendingFiles);
-      setShowCreateRouteModal(false);
-      setPendingFiles(null);
+      // Модальное окно закроется автоматически, когда uploadProgress станет null
+      // Это происходит в useEffect ниже
     } catch (err) {
       console.error('Ошибка создания маршрута с файлами:', err);
+      // Закрываем модальное окно только в случае ошибки
+      setShowCreateRouteModal(false);
+      setPendingFiles(null);
+      setUploadStarted(false);
     }
+  };
+
+  const handleClearFilters = () => {
+    setUsePriority(false);
+    setSortMode('none');
+  };
+
+  const getFilteredAndSortedImages = (images: ProcessedImage[]): ProcessedImage[] => {
+    const validImages = images.filter(img => !img.error && img.processedUrl);
+
+    // Если ничего не выбрано, возвращаем исходный порядок
+    if (!usePriority && sortMode === 'none') {
+      return validImages;
+    }
+
+    // Разделяем на группы
+    const greenImages: ProcessedImage[] = [];
+    const redImages: ProcessedImage[] = [];
+    const noDetectionsImages: ProcessedImage[] = [];
+
+    validImages.forEach(img => {
+      if (img.hasRedDetections) {
+        redImages.push(img);
+      } else if (img.hasGreenDetections) {
+        greenImages.push(img);
+      } else {
+        noDetectionsImages.push(img);
+      }
+    });
+
+    // Сортируем внутри каждой группы по количеству детекций (от большего к меньшему)
+    greenImages.sort((a, b) => (b.greenDetectionCount || 0) - (a.greenDetectionCount || 0));
+    redImages.sort((a, b) => (b.redDetectionCount || 0) - (a.redDetectionCount || 0));
+
+    // Применяем приоритетность или сортировку
+    if (usePriority) {
+      // Приоритетность определяет порядок групп
+      if (priorityMode === 'green-first') {
+        // Сначала зеленые (от большего к меньшему), потом красные (от большего к меньшему)
+        return [...greenImages, ...redImages, ...noDetectionsImages];
+      } else {
+        // Сначала красные (от большего к меньшему), потом зеленые (от большего к меньшему)
+        return [...redImages, ...greenImages, ...noDetectionsImages];
+      }
+    } else {
+      // Сортировка определяет порядок групп
+      if (sortMode === 'green-first') {
+        // Сначала все зеленые, потом все красные
+        return [...greenImages, ...redImages, ...noDetectionsImages];
+      } else if (sortMode === 'red-first') {
+        // Сначала все красные, потом все зеленые
+        return [...redImages, ...greenImages, ...noDetectionsImages];
+      }
+    }
+
+    return validImages;
   };
 
   if (!route) {
@@ -358,11 +425,6 @@ export const RouteView: React.FC<RouteViewProps> = ({
             <p className="route-view-empty-description">
               Вы не создали еще ни одного маршрута. Загрузите фото и создайте первый маршрут
             </p>
-            {onAddRoute && (
-              <button className="route-view-empty-button" onClick={onAddRoute}>
-                Загрузить фото
-              </button>
-            )}
           </div>
           <div className="route-view-empty-footer">
             <DragDropZone onFilesDropped={handleEmptyDrop} />
@@ -375,7 +437,9 @@ export const RouteView: React.FC<RouteViewProps> = ({
             onCancel={() => {
               setShowCreateRouteModal(false);
               setPendingFiles(null);
+              setUploadStarted(false);
             }}
+            uploadProgress={externalUploadProgress}
           />
         )}
       </>
@@ -404,6 +468,15 @@ export const RouteView: React.FC<RouteViewProps> = ({
                 <span className="route-view-stats-icon"></span>
                 <span className="route-view-stats-value">{stats.with_red_detections}</span>
               </div>
+              <button
+                className="route-view-filter-btn"
+                onClick={() => setShowFilterModal(true)}
+                title="Фильтр"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" />
+                </svg>
+              </button>
             </div>
           )}
         </div>
@@ -434,19 +507,56 @@ export const RouteView: React.FC<RouteViewProps> = ({
       <div className="route-view-content">
         {loading ? (
           <div className="route-view-loading">Загрузка файлов...</div>
+        ) : uploading && uploadProgress ? (
+          <div className="route-view-loading">
+            Загрузка файлов... ({uploadProgress.current}/{uploadProgress.total})
+          </div>
+        ) : uploading ? (
+          <div className="route-view-loading">Загрузка файлов...</div>
         ) : processedImages.length === 0 ? (
           <div className="route-view-no-images">
-            <p>Нет обработанных изображений</p>
-            <p className="route-view-hint">Загрузите изображения для автоматической обработки ИИ</p>
+            <p>Загрузите изображения</p>
           </div>
         ) : (
           <div className="route-view-gallery">
-            {processedImages.map((image) => (
+            {getFilteredAndSortedImages(processedImages).map((image) => (
               <div key={image.id} className="route-view-gallery-item">
                 {image.error ? (
                   <div className="route-view-image-error">
                     <p>Ошибка обработки: {image.error}</p>
                     <p className="route-view-image-name">{image.originalName}</p>
+                    <div className="route-view-image-actions">
+                      <button
+                        className="route-view-save-image-btn"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          if (image.processedUrl) {
+                            handleSaveImage(image);
+                          }
+                        }}
+                        title="Сохранить изображение"
+                        disabled={!image.processedUrl}
+                      >
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                          <polyline points="7 10 12 15 17 10" />
+                          <line x1="12" y1="15" x2="12" y2="3" />
+                        </svg>
+                      </button>
+                      <button
+                        className="route-view-delete-image-btn"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleDeleteImageClick(image);
+                        }}
+                        title="Удалить изображение"
+                      >
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <polyline points="3 6 5 6 21 6" />
+                          <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                        </svg>
+                      </button>
+                    </div>
                   </div>
                 ) : (
                   <>
@@ -458,7 +568,6 @@ export const RouteView: React.FC<RouteViewProps> = ({
                       style={{ cursor: 'pointer' }}
                       onError={(e) => {
                         console.error('Ошибка загрузки обработанного изображения:', image.processedUrl);
-                        // Показываем сообщение об ошибке вместо скрытия изображения
                         const parent = e.currentTarget.parentElement;
                         if (parent) {
                           e.currentTarget.style.display = 'none';
@@ -472,6 +581,35 @@ export const RouteView: React.FC<RouteViewProps> = ({
                         }
                       }}
                     />
+                    <div className="route-view-image-actions">
+                      <button
+                        className="route-view-save-image-btn"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleSaveImage(image);
+                        }}
+                        title="Сохранить изображение"
+                      >
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                          <polyline points="7 10 12 15 17 10" />
+                          <line x1="12" y1="15" x2="12" y2="3" />
+                        </svg>
+                      </button>
+                      <button
+                        className="route-view-delete-image-btn"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleDeleteImageClick(image);
+                        }}
+                        title="Удалить изображение"
+                      >
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <polyline points="3 6 5 6 21 6" />
+                          <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                        </svg>
+                      </button>
+                    </div>
                     <div className="route-view-image-label">{image.originalName}</div>
                   </>
                 )}
@@ -493,13 +631,38 @@ export const RouteView: React.FC<RouteViewProps> = ({
         )}
       </div>
 
-      {selectedImage && (
+      {selectedImageIndex !== null && (
         <ImageModal
-          isOpen={!!selectedImage}
-          imageUrl={selectedImage.processedUrl}
-          imageName={selectedImage.originalName}
-          onClose={() => setSelectedImage(null)}
-          onDelete={() => handleDeleteImage(selectedImage)}
+          isOpen={selectedImageIndex !== null}
+          images={getFilteredAndSortedImages(processedImages).filter(img => !img.error && img.processedUrl)}
+          currentIndex={selectedImageIndex}
+          onClose={() => setSelectedImageIndex(null)}
+          onDelete={(image) => handleDeleteImage(image)}
+          onIndexChange={(index) => setSelectedImageIndex(index)}
+        />
+      )}
+
+      <FilterModal
+        isOpen={showFilterModal}
+        usePriority={usePriority}
+        priorityMode={priorityMode}
+        sortMode={sortMode}
+        onUsePriorityChange={setUsePriority}
+        onPriorityChange={setPriorityMode}
+        onSortChange={setSortMode}
+        onClearFilters={handleClearFilters}
+        onClose={() => setShowFilterModal(false)}
+      />
+
+      {imageToDelete && (
+        <ConfirmModal
+          isOpen={true}
+          title="Удалить изображение?"
+          message={`Вы уверены, что хотите удалить изображение "${imageToDelete.originalName}"? Это действие нельзя отменить.`}
+          confirmText="Удалить"
+          cancelText="Отмена"
+          onConfirm={confirmDeleteImage}
+          onCancel={() => setImageToDelete(null)}
         />
       )}
     </div>

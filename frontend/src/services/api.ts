@@ -9,6 +9,11 @@ export interface ProcessedFile {
   file_id?: string;
   error?: string;
   note?: string;
+  green_detection_count?: number;
+  red_detection_count?: number;
+  has_green_detections?: boolean;
+  has_red_detections?: boolean;
+  total_detections?: number;
 }
 
 export interface UploadFilesResponse {
@@ -158,6 +163,12 @@ class ApiService {
     files.forEach((file) => {
       formData.append('files', file);
     });
+    return this.requestWithFormData<UploadFilesResponse>(`/routes/${routeId}/files`, formData);
+  }
+
+  async uploadSingleFile(routeId: string, file: File): Promise<UploadFilesResponse> {
+    const formData = new FormData();
+    formData.append('files', file);
     return this.requestWithFormData<UploadFilesResponse>(`/routes/${routeId}/files`, formData);
   }
 

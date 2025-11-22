@@ -1,0 +1,1298 @@
+{
+  "8f913f5b-62a5-43ce-a825-22966585e56f": {
+    "original_name": "170903--2-_JPG.rf.174da06b77ffb1379a221a03ed3ed599.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 1,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 1
+  },
+  "6799963f-b7b5-4644-b7ab-1ae59f3c75c1": {
+    "original_name": "8245245_jpg.rf.9a8d5a6c3de490a1cb391a6677dabc0b.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 5,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 5
+  },
+  "92f89dff-1d72-4f50-882e-d89b322bd498": {
+    "original_name": "8434563-_jpg.rf.69daa9702c072c0ebe105b3c60523b9e.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 8,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 8
+  },
+  "f3f4a844-2a3e-4e21-ad2d-ecb9582a10d1": {
+    "original_name": "8434563-_jpg.rf.9282f138ffe7fe7a3412497063622697.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 2,
+    "green_detection_count": 1,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 3
+  },
+  "b55529bc-4e8e-4364-9e1b-2876d6c3978c": {
+    "original_name": "8453453_png.rf.80e35253ae0c326058a19def019defb0.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 3,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 4
+  },
+  "3887be9e-607e-43b6-afc4-e766fe854ffc": {
+    "original_name": "8545245_png.rf.7ede66d839f26860e397bf71d0dc9ae0.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 1,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 2
+  },
+  "6cbbfc4f-b875-478a-8074-55cffb086de4": {
+    "original_name": "20221210_092345_jpg.rf.22adcae3bda7ed30226d14fcc52b420a.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 1,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 1
+  },
+  "c1941e25-37f2-4324-92f6-a0fbfc38e09e": {
+    "original_name": "20221210_093252_jpg.rf.efa5eedfb91024c5e9baa6cd55ffb44e.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 1,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 2
+  },
+  "4b4d5e73-38ba-446a-ace1-d419325771b6": {
+    "original_name": "20221210_093305_jpg.rf.1ca3fc44dcdc31edd339a777dcbec2d4.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 2,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 3
+  },
+  "915ea20d-4740-4c38-a1a0-9b25e383b09b": {
+    "original_name": "20221210_093321_jpg.rf.1e55b577e3e22d7808d9b2a9da521334.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 5,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 5
+  },
+  "da23febb-c154-48f8-8b1b-28efe1a647e4": {
+    "original_name": "20221210_093431-0-_jpg.rf.25d636865f86bd8b99968f96bf5a07db.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 2,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 2
+  },
+  "eb0e7578-6e22-4cad-b917-efd2d4163344": {
+    "original_name": "20221210_093436_jpg.rf.b7945e2b51127efc451caabd3c4d5f3e.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 2,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 2
+  },
+  "46e65f36-5796-45d7-8337-6dbe783c5643": {
+    "original_name": "20221213_112752_jpg.rf.78cc8f9c381da89bd5fae95854c2e573.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 4,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 4
+  },
+  "c738936a-1383-4fed-bbc7-1231241d8a0a": {
+    "original_name": "20221214_103316_jpg.rf.d3f634ba98c5a658230d5af304073b3e.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 2,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 2
+  },
+  "f70a16c2-a692-4771-bf25-06ee31a6365d": {
+    "original_name": "20221214_104312_jpg.rf.7dc30313f3f9a856cd46a6251d7c6e28.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 1,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 1
+  },
+  "7945f2fe-eaef-4ba4-8da5-5ae25078a3a7": {
+    "original_name": "20221221_143744_jpg.rf.2a1bdbe81972acd85cf0e086b0b7c239.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 1,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 2
+  },
+  "2ab24994-1ad3-4e1f-9d65-0a82a78c114b": {
+    "original_name": "20221221_143753_jpg.rf.adab9f0cc47e14f6d31e33edf7c798a6.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 2,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 2
+  },
+  "bf3d65f0-c007-49ef-967d-ee9c9e90bf37": {
+    "original_name": "20221221_143814_jpg.rf.ef32989b6756746b3419057b9572ec16.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 1,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 1
+  },
+  "f00a1981-dc78-4dbc-b200-9a63281dc808": {
+    "original_name": "20221221_143818_jpg.rf.515de4ce141707fd1543219f31e33717.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 1,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 1
+  },
+  "a8684c44-115b-4ddd-8a84-65de2cba47ec": {
+    "original_name": "20221221_143821_jpg.rf.61cddadb692e0971501c1538185d4449.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 3,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 3
+  },
+  "680334f0-e632-4dee-bfd6-712e4edcd984": {
+    "original_name": "20221221_143854_jpg.rf.af401aee870d7dfd3fa1389f00bd5026.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 3,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 3
+  },
+  "4feb527b-7cb2-4d4f-9609-ae07cf4d0422": {
+    "original_name": "20221221_144103_jpg.rf.1763527268203d47784e07363cadbbf0.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 2,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 2
+  },
+  "52698547-51a6-4274-afc0-2a4534be2174": {
+    "original_name": "20221221_144107_jpg.rf.2545a8b0cb553ebbe4bb51109d5cbe22.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 2,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 2
+  },
+  "65983c83-efde-4b71-ac66-11724c5742c0": {
+    "original_name": "20221221_144134_jpg.rf.121545f32b73865b013e8e29c370cc1b.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 1,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 1
+  },
+  "48affdb9-c563-4413-bf2b-b739e77291a1": {
+    "original_name": "20230106_112412_jpg.rf.3704f791637e937d57776b457073c1e6.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 4,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 4
+  },
+  "b693451b-d94a-402c-b8a2-e773f894178a": {
+    "original_name": "20230106_112412_jpg.rf.16881f50648946a59f28033924d526a7.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 5,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 6
+  },
+  "2600f03a-c899-4a9c-8e9c-2de887847788": {
+    "original_name": "834365345_png.rf.0460bd93085df5156a5b4a1327b4daa6.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 9,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 9
+  },
+  "c9fbc01e-69f2-4ebc-92a2-19204a28d8b1": {
+    "original_name": "834365345_png.rf.5423c1614f328da95b001a0cbcaa9254.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 9,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 10
+  },
+  "e16d19e0-e137-4cf4-bf08-78720f0eff40": {
+    "original_name": "834365345_png.rf.ede1d116185606307d47e6a47cf7ea62.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 6,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 7
+  },
+  "9200e981-18ba-4c81-b048-53f0161c0c1e": {
+    "original_name": "845343456_png.rf.da045241c18128048edf736073f0ead9.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 6,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 6
+  },
+  "5d8c3e7e-572d-4fca-9ff0-8968b72ccd0e": {
+    "original_name": "854245324_png.rf.b06deb8dddb8d69f2946512098fd9cb3.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 6,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 6
+  },
+  "67f5965b-883b-4245-b5bf-e9358a9a0d6e": {
+    "original_name": "85432432654_jpg.rf.464cd07f31b019d83e554bff1d595fbf.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 5,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 5
+  },
+  "0ea20bec-282a-4bf4-8c7c-d74b8c9b598f": {
+    "original_name": "C37-BD-SG-_jpg.rf.8b5d6466b9150c10e25c5ff599aed26c.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 4,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 4
+  },
+  "5dd44418-2e94-4b3e-990e-2922e6165ccc": {
+    "original_name": "C37-BD-SG_jpg.rf.ca8f29653cca655ad4cb8237159596c5.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 13,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 13
+  },
+  "4e57cb60-f978-4b8f-afcd-dcc4bc8824fc": {
+    "original_name": "cdien_ttinh_ct_vo_502_jpg.rf.6f56b2aa4e2145a0914c9f4b1f2faf9c.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 2,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 3
+  },
+  "0c155f65-d9cd-409e-84c5-a8a20a718ce9": {
+    "original_name": "cdien_ttinh_ct_vo_503_jpg.rf.9d59df13aa0a14a4f1ec039616e5a762.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 1,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 2
+  },
+  "04517f9d-14f4-4dfa-903f-fdc6da37c209": {
+    "original_name": "cdien_ttinh_ct_vo_508_JPG_jpg.rf.c1eeaa2d860ade0c435628edf191a46b.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 5,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 6
+  },
+  "f19a4dbf-e799-4351-8616-2d7893661ce1": {
+    "original_name": "cdien_ttinh_ct_vo_509_JPG_jpg.rf.de561c54bb50d88aa33daa32301ee1ab.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 2,
+    "green_detection_count": 1,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 3
+  },
+  "52f28ec4-bdf4-43fb-8d36-279f12122184": {
+    "original_name": "cdien_ttinh_ct_vo_510_JPG_jpg.rf.101e957a29a934c39ffe927625dbb179.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 2,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 2
+  },
+  "57a0b47c-6c56-4631-a560-0104156da88c": {
+    "original_name": "cdien_ttinh_ct_vo_512_JPG_jpg.rf.7b2d8b56087146148334022f001bdf07.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 1
+  },
+  "56abbe62-7ae9-4c4c-aecf-1c694cfceddc": {
+    "original_name": "cdien_ttinh_ct_vo_513_JPG_jpg.rf.e4e06186a889bd71b338c0196a53dbc7.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 1,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 2
+  },
+  "0df75dab-ff7b-41a7-9dea-6ec8566a337a": {
+    "original_name": "cdien_ttinh_ct_vo_515_JPG_jpg.rf.d19cbf0601919f6a3120e2bd377e3556.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 3,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 4
+  },
+  "9ae72393-6241-4c65-a4cf-e19e893ba3d8": {
+    "original_name": "cdien_ttinh_ct_vo_524_JPG_jpg.rf.106bc2223956a78e6bd036fe58b05a86.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 2,
+    "green_detection_count": 1,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 3
+  },
+  "83548dfc-97ea-42ce-9c44-17c88713e43e": {
+    "original_name": "cdien_ttinh_ct_vo_530_JPG_jpg.rf.cc1f75c7387e74cec8aa071c9f82ac52.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 1
+  },
+  "3cab994d-62ab-4eb5-94c6-46e9aaf2b79f": {
+    "original_name": "cdien_ttinh_ct_vo_531_JPG_jpg.rf.2d7e446114c3ccb42b5984bbc53586d9.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 2,
+    "green_detection_count": 1,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 3
+  },
+  "177419c2-581b-44d8-b926-37c50b758949": {
+    "original_name": "cdien_ttinh_ct_vo_532_JPG_jpg.rf.b1e3af8d4a68fa8f73a3121999407229.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 2,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 2
+  },
+  "6a9bf37d-fa9d-4cff-89b5-c602748d6a05": {
+    "original_name": "cdien_ttinh_ct_vo_533_JPG_jpg.rf.0e4f597b319dcfba5c9f0add9d3975ad.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 1,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 2
+  },
+  "ac199be4-c16a-4dba-9880-54a4a419867f": {
+    "original_name": "cdien_ttinh_ct_vo_535_JPG_jpg.rf.7a915c2c9cccb24a5b94bf00b8d59836.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 1,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 1
+  },
+  "8d9e40f1-ce9e-4bc3-bf1b-a364a44f3568": {
+    "original_name": "cdien_ttinh_ct_vo_541_JPG_jpg.rf.c79ee28c2a1223f4703fcdbbd8bcd951.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 1
+  },
+  "6a11f8ad-a031-403d-a99c-081e36478dd8": {
+    "original_name": "cdien_ttinh_ct_vo_542_JPG_jpg.rf.ee2a12835d5970b51011e65bdd526f7f.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 2,
+    "green_detection_count": 1,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 3
+  },
+  "ed9f448d-a9a0-48f2-90d5-c05f6e1404b6": {
+    "original_name": "cdien_ttinh_ct_vo_544_JPG_jpg.rf.5208ca73e5b5725813c045b3ea634640.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 2,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 2
+  },
+  "2c319f6c-0c62-45be-937f-fd435aae23cb": {
+    "original_name": "cdien_ttinh_ct_vo_546_JPG_jpg.rf.249f461adb7dfc117bfce2414d91a320.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 1
+  },
+  "b058e835-a5c5-41c9-816a-10a09de37f5a": {
+    "original_name": "cdien_ttinh_ct_vo_552_JPG_jpg.rf.96afb5e3fe72329ba2e61609b55543f6.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 1
+  },
+  "a452c3fe-2635-4035-8a7d-04dd12947da2": {
+    "original_name": "cdien_ttinh_ct_vo_554_JPG_jpg.rf.baa12f8cf7fc5bfc7020b028cbcf502f.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 1,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 2
+  },
+  "1ac867b6-fe3c-4297-96e5-d263ffb28c85": {
+    "original_name": "cdien_ttinh_ct_vo_555_JPG_jpg.rf.43e67c959073f04103e3ecf249c608e6.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 1
+  },
+  "c6c9869a-d19a-470c-900d-45404b185d9f": {
+    "original_name": "cdien_ttinh_ct_vo_558_JPG_jpg.rf.985dd01b8fc2926d17e707a4fcbc02a9.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 3,
+    "green_detection_count": 1,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 4
+  },
+  "e51f9051-d064-413d-b91d-760e3b408a61": {
+    "original_name": "cdien_ttinh_ct_vo_560_JPG_jpg.rf.cf3c7c1b1ef896e6c580f13ca4004db3.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 1,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 1
+  },
+  "7cd660a0-0e73-48c6-bc56-c98e35a18cfb": {
+    "original_name": "cdien_ttinh_ct_vo_563_JPG_jpg.rf.2ddf46f6e8e1f0bb0685139221fd0fc1.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 1
+  },
+  "bf8592b0-de2d-4a7a-96dc-d4d0f0266d98": {
+    "original_name": "cdien_ttinh_ct_vo_565_JPG_jpg.rf.86f3234ba0936d709f5cee0fec321fe6.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 1
+  },
+  "6b2dc805-4f27-4c18-aac2-e645d66a9781": {
+    "original_name": "cdien_ttinh_ct_vo_566_JPG_jpg.rf.349e7c817f0a7d62f24fe04febf18244.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 1,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 1
+  },
+  "83c49296-15aa-43a6-a106-0a3fa9784e02": {
+    "original_name": "cdien_ttinh_ct_vo_569_JPG_jpg.rf.7a4503129d0cb43a9fb2d8e453906799.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 1,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 1
+  },
+  "19024c5e-f534-4c1d-bb63-44de44f7bf9b": {
+    "original_name": "cdien_ttinh_ct_vo_570_JPG_jpg.rf.6aa938e8f2a08af24cc845a6d771f37a.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 1
+  },
+  "7fe88634-6915-4b17-a89d-e1e4916a79b5": {
+    "original_name": "cdien_ttinh_ct_vo_575_JPG_jpg.rf.ae928b12995826e0a946a0cb85f00b81.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 2,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 2
+  },
+  "c0dbd481-14a3-4d4b-8914-de996ade3dc1": {
+    "original_name": "cdien_ttinh_ct_vo_578_JPG_jpg.rf.db8d13012f67da7d25d6d6580982f8b9.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 1,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 1
+  },
+  "d3041933-db23-431e-aabd-796fc8d87145": {
+    "original_name": "cdien_ttinh_ct_vo_579_JPG_jpg.rf.52dec4f8b0f1ee2ec54c16d7cf9afaf8.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 2,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 2
+  },
+  "955ceddc-b1ab-4f24-a587-6eec3c2d0a38": {
+    "original_name": "cdien_ttinh_ct_vo_582_JPG_jpg.rf.ad094f7b42a14d1d3095edff9e982632.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 3,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 3
+  },
+  "360000b2-6784-40f0-8b96-cc2f85a9f44d": {
+    "original_name": "cdien_ttinh_ct_vo_584_JPG_jpg.rf.8e5836a269c6e879f9fbce082f31923b.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 2,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 2
+  },
+  "1454bc9a-bb72-4fc6-b4bb-286c6f648cf2": {
+    "original_name": "cdien_ttinh_ct_vo_585_JPG_jpg.rf.750ac444f751a1a38aa4b61dd4582b07.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 1,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 1
+  },
+  "22d1019d-cc5f-40b6-b65f-2ab5afa67a5c": {
+    "original_name": "cdien_ttinh_ct_vo_586_JPG_jpg.rf.ee0847cf1b01b024b3abc90a52ff5fd7.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 1
+  },
+  "8a79decf-fc3a-45fd-b131-3a86b7637028": {
+    "original_name": "cdien_ttinh_ct_vo_591_JPG_jpg.rf.4d1cd4cd72d74d471978a7d68f0fbd31.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 3,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 3
+  },
+  "8a0530b3-c8b3-4f83-bd2c-ce5e90a18eab": {
+    "original_name": "cdien_ttinh_ct_vo_592_JPG_jpg.rf.35a107e4ca20faf3bff13371d5a94a81.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 2,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 2
+  },
+  "93607004-2517-4531-b718-6f670ae58f69": {
+    "original_name": "cdien_ttinh_ct_vo_601_JPG_jpg.rf.129e3f298577cd35735423944380ad38.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 1,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 1
+  },
+  "cc19afdc-1f6d-4269-9222-f39d619015c1": {
+    "original_name": "cdien_ttinh_ct_vo_612_JPG_jpg.rf.f7d11c26e34daef8b38677d15718fbba.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 2,
+    "green_detection_count": 1,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 3
+  },
+  "56048d0f-c193-4986-b169-d7489461ced9": {
+    "original_name": "cdien_ttinh_ct_vo_615_JPG_jpg.rf.77b81c765c81eb5ac4e73dca0b64ceb2.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 1
+  },
+  "f3ca8f21-57f6-4622-ae42-ca802380be2e": {
+    "original_name": "cdien_ttinh_ct_vo_617_jpg.rf.2cae63bed7168242ae40505224096476.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 2,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 2
+  },
+  "441a5b52-6752-4c44-ab5d-b8f7e981480c": {
+    "original_name": "cdien_ttinh_ct_vo_619_jpg.rf.bb38d92bba9f37ab12ad859c498862b5.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 4,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 4
+  },
+  "67b1a817-e592-425e-a0e9-f6a308291a56": {
+    "original_name": "cdien_ttinh_ct_vo_620_jpg.rf.06278894e9d72cb8e53dabf4fea37af7.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 1
+  },
+  "fce5dd29-0b85-40f7-99e3-fdcf4e7147aa": {
+    "original_name": "composite-insulators.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 5,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 5
+  },
+  "bbca359e-6c9a-4ffe-8701-ef4e510fed35": {
+    "original_name": "Dan-phun-lua-len-DZ_jpg.rf.5e7641d4d396b42ccf93f9bb53a39a50.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 2,
+    "green_detection_count": 1,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 3
+  },
+  "c44f1f50-cb30-406c-975d-f17d9e851ffc": {
+    "original_name": "Dan-phun-lua-len-DZ_jpg.rf.3949965a0d7a36e46ab0029a18d2c23b.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 6,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 6
+  },
+  "a07bb1ed-8e74-4b57-a81b-77b39e953528": {
+    "original_name": "Dan-phun-lua-len-DZ-3_jpg.rf.a63075f90535e0c331bdd0ee4eceabc2.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 4,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 4
+  },
+  "7f448f36-b44c-4336-8cce-4e06ab75a625": {
+    "original_name": "Dieu-bay-vao-day-dan_jpg.rf.e9324806521f0df1b716cdbea462903d.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 4,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 4
+  },
+  "d3fc4bd1-9435-42a4-8f07-9d7e24a50712": {
+    "original_name": "Disk_Missing--1-_JPG.rf.34d4b3c4ba314160be5eff9cdad672c1.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 1,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 2
+  },
+  "7f130d3b-8d1f-4f39-8bb6-acf93023fba3": {
+    "original_name": "Disk_Missing--4-_JPG.rf.8547f36ed795b7eff75283ef0fe4f066.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 1,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 1
+  },
+  "eb432136-d375-4fd8-8474-1c7fa35bf7d0": {
+    "original_name": "Disk_Missing--4-_JPG.rf.8960a7d7a2893bd8ee23a76c107e56cc.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 1,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 1
+  },
+  "8b05a5e7-929b-4590-932a-cfff4ce64116": {
+    "original_name": "Disk_Missing--5-_JPG.rf.5ecc492ccef368bf4a0e74265f1718ff.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 1
+  },
+  "7bb0b5f0-108c-4a33-b6d3-bffd383b669e": {
+    "original_name": "Disk_Missing--5-_JPG.rf.121a3fc28d06a201fb52695c2c72999a.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 1
+  },
+  "f6eab2b9-5356-4494-86c0-228c38effcb7": {
+    "original_name": "Disk_Missing--6-_JPG.rf.0407d77693955d8fd868271a4f7f9ce6.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 1
+  },
+  "ecac9211-91dd-4f8a-900d-884e1b7873de": {
+    "original_name": "Disk_Missing--6-_JPG.rf.a84b067da17b92c843595a266fa29bf5.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 1,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 2
+  },
+  "1612e54f-47eb-4a83-b346-828ad245a651": {
+    "original_name": "Disk_Missing--9-_JPG.rf.04c78f86b29e7917dc79f7b79f5e7125.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 1
+  },
+  "d8802056-2cee-454d-8502-ef4917a4c1e4": {
+    "original_name": "Disk_Missing--9-_JPG.rf.ec5201a81c25ad1570b7110a1b442643.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 1
+  },
+  "0d069866-883e-4d47-9e69-34282a218fa3": {
+    "original_name": "Disk_Missing--10-_JPG.rf.1a495315fcba8dcd8fc34d650d5f6bb5.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 1,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 2
+  },
+  "cdff85a4-c0a9-470b-ac3d-2abc86d2f0d7": {
+    "original_name": "Disk_Missing--11-_JPG.rf.723f85493253440c3c8ca869b3150731.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 1
+  },
+  "d909f733-38a6-4eeb-afee-dfae1b4d36cf": {
+    "original_name": "Disk_Missing--13-_JPG.rf.1cb5f8f35fc1b737793eb46446f8d471.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 1
+  },
+  "ed571f6d-7210-4801-ac92-3651025802d0": {
+    "original_name": "Disk_Missing--13-_JPG.rf.cfe16bb5c9b0839602ecdaf150bad20b.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 1
+  },
+  "86d15d62-a501-4839-8982-0b8acf04b478": {
+    "original_name": "Disk_Missing--13-_JPG.rf.d7a2a9e47c1edffc4fa445c648f62c64.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 1
+  },
+  "04d7d86e-be1c-4365-bafd-44415835a215": {
+    "original_name": "Disk_Missing--14-_JPG.rf.64f5edd13c197104a2bf8b67e8b3a09d.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 1
+  },
+  "80a70888-ad53-45df-a774-b5255320b0e4": {
+    "original_name": "Disk_Missing--15-_JPG.rf.d7247eb25397f8499aba0412a11689b3.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 1
+  },
+  "5ce3d881-8c66-4c08-b8ab-46640bac3940": {
+    "original_name": "Disk_Missing--16-_JPG.rf.9bc33b44c24cca3615b2690ff002a65b.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 1
+  },
+  "8636530e-85f0-4662-b815-c80b0e5e14e4": {
+    "original_name": "Disk_Missing--17-_JPG.rf.c00035d1f64b4ef4ccea53400cbcc620.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 1
+  },
+  "2657cc03-2a00-4867-a6fe-471a17157d44": {
+    "original_name": "Disk_Missing--17-_JPG.rf.c83c4751c84866d696d7a79e8162eda8.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 0,
+    "has_red_detections": true,
+    "has_green_detections": false,
+    "total_detections": 1
+  },
+  "a2429fb0-d4fe-46aa-bde4-4daa5303b2f3": {
+    "original_name": "Disk_Missing--18-_JPG.rf.1ff2c4ed0f9e9a4ea18891dadbdecb16.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 2,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 3
+  },
+  "51c52606-586b-4d7e-9895-117523dc28d0": {
+    "original_name": "Disk_Missing--19-_JPG.rf.79b7453c0b1de794865c859c9f3d8d0d.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 1,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 2
+  },
+  "04909d58-34f1-4a27-9e11-0b27dd30a785": {
+    "original_name": "Disk_Missing--19-_JPG.rf.e6eba19d7e697c83b8a5dc1cb308df18.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 1,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 2
+  },
+  "fe70a517-b107-40da-9ecd-e6adfd2c2fdd": {
+    "original_name": "Disk_Missing--20-_JPG.rf.8e335ca387e8f4a4836eab3807740b86.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 2,
+    "green_detection_count": 3,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 5
+  },
+  "9e8129c5-7847-4c07-8596-d0e1aa3110bb": {
+    "original_name": "Disk_Missing--22-_JPG.rf.5a30bd26691cf998f2a6a098bd442df0.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 2,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 3
+  },
+  "5b8d04e7-d00b-4ebc-a4cf-2dcb0ec95c76": {
+    "original_name": "Disk_Missing--22-_JPG.rf.d216a9a1cf24de3166a91d9357bff4ff.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 2,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 3
+  },
+  "c726e414-1183-4e2e-9770-0d7d188064a3": {
+    "original_name": "DJI_0001_JPG_jpg.rf.8c79999dcf991e92ac750479a4a08e7a.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 7,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 8
+  },
+  "c1e60aac-7e98-40a9-adf7-f37990b3fc33": {
+    "original_name": "DJI_0002_jpg.rf.018be88f098143da6703058731137bad.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 3,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 3
+  },
+  "b0343792-a5d1-4245-8e92-d68d6dc800a9": {
+    "original_name": "DJI_0003_JPG.rf.97d96db7c7ace0fea29c8bd6d6eccf7c.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 2,
+    "green_detection_count": 6,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 8
+  },
+  "6b066d45-cbc6-46f2-99b6-fa5104ca6786": {
+    "original_name": "DJI_0003_JPG_jpg.rf.1739e0779bbf571caf30b29049de57f3.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 7,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 7
+  },
+  "b275e35c-3648-49bf-86f9-404558785800": {
+    "original_name": "DJI_0004_JPG.rf.033a8ef9659085f34003378bfaf2c547.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 6,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 6
+  },
+  "c9deab23-37e4-4929-a459-bef639cf82ff": {
+    "original_name": "DJI_0004_JPG.rf.86462cc1a014aafd3cdbc2ab4a20f04a.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 6,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 6
+  },
+  "00f24e63-e9a0-4c0c-a9e1-4397503c7550": {
+    "original_name": "DJI_0005_JPG.rf.0b6a3ec9a9eeba41f6130959a7087c3b.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 7,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 7
+  },
+  "7fc2d78e-3bba-4662-8e49-47da470e7bc0": {
+    "original_name": "DJI_0005_JPG.rf.135b81b232b9434237eb7eb83f70c37f.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 7,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 7
+  },
+  "f591bdca-18ff-4f9b-8518-4439cb31eb88": {
+    "original_name": "DJI_0005_JPG.rf.f99fa1301de2e79ea4f9dc13957813ec.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 6,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 6
+  },
+  "2ad12843-ea00-493f-9cd5-98a4f6a2f5f6": {
+    "original_name": "DJI_0005_JPG_jpg.rf.a2f9d6f15e2fdb7217f502955c017108.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 4,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 4
+  },
+  "50fcf366-4f50-4a86-bbba-9794689b678b": {
+    "original_name": "DJI_0006_jpg.rf.da3018d47de8111f63d9cb1d547879ac.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 1,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 1
+  },
+  "5db63809-a68a-4ac2-828a-c53fd07dd9d5": {
+    "original_name": "DJI_0007_jpg.rf.04e7c1211b7ec896f09b2d6d82bab1ed.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 2,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 2
+  },
+  "89e01fc4-f14a-4177-8bd9-b58a1cc8c82c": {
+    "original_name": "DJI_0007_JPG.rf.681f1895f270e8042644904368fa006a.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 5,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 5
+  },
+  "a7577cf3-8c8e-4332-ae16-72a25f8a5feb": {
+    "original_name": "DJI_0007_JPG.rf.54295ee3aa3a4b60cd1f81952d80a1f6.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 5,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 5
+  },
+  "1265242b-0aa1-4bf2-8227-1062bf44f2d4": {
+    "original_name": "DJI_0007_JPG.rf.fb30c1ea3dffbe4c5b36c908dbc8cbf4.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 6,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 7
+  },
+  "2034fd10-78da-4a47-937b-04f3a752b5ab": {
+    "original_name": "DJI_0007_JPG_jpg.rf.c392a38f8d3e9269b8013482238e2ac7.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 5,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 5
+  },
+  "edabbee1-f7b1-4eb6-bfbd-549372799d71": {
+    "original_name": "DJI_0007_JPG_jpg.rf.dc66f96b230ef287b6449a31c51265d4.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 10,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 11
+  },
+  "08b0bda8-1f8f-4eb9-a448-7e91c50fc084": {
+    "original_name": "DJI_0008_JPG.rf.34212de7f4f3fbd97897bf07ea6a5626.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 10,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 10
+  },
+  "c4206a0b-2c33-45ba-b719-3b3f52fdf2cf": {
+    "original_name": "DJI_0009_JPG.rf.d3a777161d1c51ea71ff82dc415e0acf.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 3,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 4
+  },
+  "29b2d6e3-9a3a-4b3c-8b65-5105f59677af": {
+    "original_name": "DJI_0010_JPG.rf.6bf53dcb09654a75a7b0130ed57b6271.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 2,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 2
+  },
+  "2c395d2c-4717-4923-bbbd-c8ea684ac1d8": {
+    "original_name": "DJI_0010_JPG.rf.f5f83d968fd5b8703a9c497e762332a0.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 4,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 4
+  },
+  "afb553f7-f7d9-4bb7-ab7d-5989eb1c785d": {
+    "original_name": "DJI_0010_JPG_jpg.rf.45dc960bd082f07d645cbfb2d03e8a47.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 2,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 2
+  },
+  "d3c22668-fddd-4026-9561-a4accd58416f": {
+    "original_name": "DJI_0011_JPG.rf.9ffdb516bcdbc1cd24a9c576e2bf61eb.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 7,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 7
+  },
+  "0fb03387-e686-42bd-bb29-789f6d61ebac": {
+    "original_name": "DJI_0011_JPG.rf.bf9acf51680b407e0c6a514edfc41e7b.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 11,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 11
+  },
+  "1b967b23-43be-4b1e-9e4f-2632e5636202": {
+    "original_name": "DJI_0011_JPG_jpg.rf.3d3bc851ffe09556715ff3c854c3dc7a.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 7,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 7
+  },
+  "851ff1d8-f903-4119-b001-dbae1029fc03": {
+    "original_name": "DJI_0011_JPG_jpg.rf.cb016548336c095c1aa5b2285c6aed38.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 11,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 12
+  },
+  "553b31ea-7f43-40d2-937b-8d59d8399468": {
+    "original_name": "DJI_0012_JPG.rf.c0b52aa48d019d7ca4d0cb23f397b792.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 4,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 4
+  },
+  "836b77a1-b027-4377-ba97-c1bbd3f1dc8d": {
+    "original_name": "DJI_0012_JPG_jpg.rf.3899a0657d6670ae4ba06630fdc5826b.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 3,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 3
+  },
+  "5273321a-5912-4b68-bec2-eb0d6d46297c": {
+    "original_name": "DJI_0013_JPG.rf.2bad98753936a324dafe3081810b3711.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 2,
+    "green_detection_count": 14,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 16
+  },
+  "b2ab6a72-b827-45ff-ad1a-eba316f8485d": {
+    "original_name": "DJI_0013_JPG.rf.43ccdf5dc751e9e1514db241656fbe8f.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 5,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 5
+  },
+  "e415a13d-7ef3-4960-a765-382cc9be4812": {
+    "original_name": "DJI_0013_JPG.rf.75af101a853627ed112585a51042b80b.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 8,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 8
+  },
+  "6694b31d-7e8f-4acd-9413-9668d7b1a531": {
+    "original_name": "DJI_0013_JPG_jpg.rf.7d190a627e8da2b8d9e011ce1d4a720d.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 4,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 5
+  },
+  "04e2e132-e4e6-456e-bf41-bdaf9471394f": {
+    "original_name": "DJI_0015_JPG_jpg.rf.6e27ffffbb99a39a526f1dce423081a6.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 3,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 3
+  },
+  "5165818e-6766-40eb-8a31-64f844841d2d": {
+    "original_name": "DJI_0015_JPG_jpg.rf.cd6bf0ee92f50723414b7d5728f863db.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 5,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 6
+  },
+  "b512b404-fd96-40aa-b1fb-f0dcad8336d9": {
+    "original_name": "DJI_0017_JPG.rf.3a9bc9d2d189ebb199e76c3178e0bc01.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 6,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 7
+  },
+  "ef5a585f-98e0-405f-b2bc-68c4e8349d44": {
+    "original_name": "DJI_0017_JPG.rf.430febbff615ad0f28d07db4f09d95f7.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 4,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 4
+  },
+  "ec998a32-7db4-448b-9f9d-b771208da474": {
+    "original_name": "DJI_0017_JPG_jpg.rf.b53434b6de5357e50e486664666767ce.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 5,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 6
+  }
+}

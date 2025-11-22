@@ -1,0 +1,65 @@
+{
+  "4233b7bc-a79a-43b0-b588-34b6a8e79b06": {
+    "original_name": "170903--2-_JPG.rf.174da06b77ffb1379a221a03ed3ed599.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 1,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 1
+  },
+  "c1a5e51f-df43-471d-bdd8-a0adecf21448": {
+    "original_name": "8245245_jpg.rf.9a8d5a6c3de490a1cb391a6677dabc0b.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 5,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 5
+  },
+  "6f00f9ab-d7a1-45e8-af0a-3896b1b4ee91": {
+    "original_name": "8434563-_jpg.rf.9282f138ffe7fe7a3412497063622697.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 2,
+    "green_detection_count": 1,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 3
+  },
+  "3af0b3d6-e77d-4cd4-bf80-310fde4a0096": {
+    "original_name": "8453453_png.rf.80e35253ae0c326058a19def019defb0.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 3,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 4
+  },
+  "0aa22777-dbe3-4c8c-8b5f-90c1637a75c6": {
+    "original_name": "8545245_png.rf.7ede66d839f26860e397bf71d0dc9ae0.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 1,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 2
+  },
+  "72c02226-11e0-4a0f-863c-13a72c39dc80": {
+    "original_name": "20221210_092345_jpg.rf.22adcae3bda7ed30226d14fcc52b420a.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 0,
+    "green_detection_count": 1,
+    "has_red_detections": false,
+    "has_green_detections": true,
+    "total_detections": 1
+  },
+  "73ec5275-0843-4c8a-ab8f-6f9bff883826": {
+    "original_name": "20221210_093252_jpg.rf.efa5eedfb91024c5e9baa6cd55ffb44e.jpg",
+    "file_ext": ".jpg",
+    "red_detection_count": 1,
+    "green_detection_count": 1,
+    "has_red_detections": true,
+    "has_green_detections": true,
+    "total_detections": 2
+  }
+}

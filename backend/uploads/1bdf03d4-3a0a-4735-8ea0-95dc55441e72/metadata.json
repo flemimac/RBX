@@ -80,15 +80,6 @@
     "has_green_detections": true,
     "total_detections": 4
   },
-  "1c0ba715-a653-479e-bc46-49bb354c6857": {
-    "original_name": "tcrung_ct_609_jpg.rf.e97669271f0aa38835d38306a8828b0d.jpg",
-    "file_ext": ".jpg",
-    "red_detection_count": 0,
-    "green_detection_count": 1,
-    "has_red_detections": false,
-    "has_green_detections": true,
-    "total_detections": 1
-  },
   "0f123c34-1ae0-4282-b8f8-a10453f4a0ca": {
     "original_name": "tcrung_ct_611_jpg.rf.73589225f74c1762ffccf5eaa0e3887b.jpg",
     "file_ext": ".jpg",

@@ -80,15 +80,6 @@
     "has_green_detections": true,
     "total_detections": 10
   },
-  "060f52a6-be0f-4d0d-98e5-f84e10a65044": {
-    "original_name": "z3941023127478_59584b025fef63176fb5b545efc0bd1e_jpg.rf.cd24244a626b2633d5c0a4c5d359a38d.jpg",
-    "file_ext": ".jpg",
-    "red_detection_count": 1,
-    "green_detection_count": 2,
-    "has_red_detections": true,
-    "has_green_detections": true,
-    "total_detections": 3
-  },
   "2f5c4d22-702f-464b-bf99-f8d139fe51a7": {
     "original_name": "z3943444262130_80f1886bb83b4fdcb4824f04dc930e06_jpg.rf.17f11ad3d3525aff39fed6279cc80836.jpg",
     "file_ext": ".jpg",
@@ -133,14 +124,5 @@
     "has_red_detections": true,
     "has_green_detections": false,
     "total_detections": 3
-  },
-  "19a9967d-b3ea-46ae-a383-24fdee82f31a": {
-    "original_name": "z3941022374216_be31ab177a706de87e6d98cf73158173_jpg.rf.0910b914afef066f4fb52f01829a1fcc.jpg",
-    "file_ext": ".jpg",
-    "red_detection_count": 1,
-    "green_detection_count": 0,
-    "has_red_detections": true,
-    "has_green_detections": false,
-    "total_detections": 1
   }
 }
